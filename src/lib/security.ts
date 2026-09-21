@@ -1,4 +1,3 @@
-import { timingSafeEqual } from "crypto";
 import { NextRequest, NextResponse } from "next/server";
 import { getSiteUrl } from "@/lib/seo";
 
@@ -61,14 +60,14 @@ export function rateLimitedResponse(retryAfterSec = 60) {
   );
 }
 
+/** Constant-time string compare (Edge + Node safe — no node:crypto). */
 export function safeEqualString(a: string, b: string) {
-  const left = Buffer.from(a);
-  const right = Buffer.from(b);
-  if (left.length !== right.length) {
-    timingSafeEqual(left, Buffer.alloc(left.length));
-    return false;
+  if (a.length !== b.length) return false;
+  let out = 0;
+  for (let i = 0; i < a.length; i += 1) {
+    out |= a.charCodeAt(i) ^ b.charCodeAt(i);
   }
-  return timingSafeEqual(left, right);
+  return out === 0;
 }
 
 /** Hosts allowed to call cookie-authenticated / form POST APIs from a browser. */
