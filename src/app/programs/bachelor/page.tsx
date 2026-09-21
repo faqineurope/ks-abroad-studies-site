@@ -1,10 +1,11 @@
-export const dynamic = "force-dynamic";
-
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ProgramExplorer } from "@/components/program-explorer";
 import { getCentSGuide } from "@/lib/cent-s";
 import { getMeta, getPrograms } from "@/lib/data";
+import { PUBLIC_REVALIDATE_SECONDS } from "@/lib/cache";
+
+export const revalidate = PUBLIC_REVALIDATE_SECONDS;
 
 export const metadata: Metadata = {
   title: "Bachelor's Programs in English",
@@ -22,7 +23,7 @@ export default async function BachelorProgramsPage() {
   return (
     <div className="site-shell page-hero pb-12 md:pb-16">
       <Link href="/" className="text-sm font-semibold text-[var(--sea-deep)] hover:underline">
-        ← Home
+        â† Home
       </Link>
       <p className="eyebrow mt-6">Intake {meta.intake}</p>
       <h1 className="display mt-3 text-4xl md:text-6xl max-w-4xl">
@@ -67,15 +68,15 @@ export default async function BachelorProgramsPage() {
         </p>
         <p className="text-[var(--ink-soft)] leading-relaxed">{centS.howToUseScore}</p>
         <p className="text-[var(--ink-soft)] leading-relaxed">
-          Fee €{centS.feeEuro} · {centS.structure.totalQuestions} questions ·{" "}
-          {centS.structure.durationMinutes} minutes · {centS.formats.join("; ")}.
+          Fee â‚¬{centS.feeEuro} Â· {centS.structure.totalQuestions} questions Â·{" "}
+          {centS.structure.durationMinutes} minutes Â· {centS.formats.join("; ")}.
         </p>
 
         <h3 className="pt-2 text-xl font-semibold">Test sections</h3>
         <ul className="space-y-2 text-[var(--ink-soft)]">
           {centS.structure.sections.map((section) => (
             <li key={section.name} className="leading-relaxed">
-              · {section.name} ({section.durationMinutes} min) — {section.topics}
+              Â· {section.name} ({section.durationMinutes} min) â€” {section.topics}
             </li>
           ))}
         </ul>
@@ -84,7 +85,7 @@ export default async function BachelorProgramsPage() {
         <ul className="space-y-2 text-[var(--ink-soft)]">
           {centS.macroPeriods.map((period) => (
             <li key={period} className="leading-relaxed">
-              · {period}
+              Â· {period}
             </li>
           ))}
         </ul>
@@ -95,7 +96,7 @@ export default async function BachelorProgramsPage() {
         <ul className="space-y-2 text-[var(--ink-soft)]">
           {centS.exceptions.map((item) => (
             <li key={item} className="leading-relaxed">
-              · {item}
+              Â· {item}
             </li>
           ))}
         </ul>
@@ -107,10 +108,10 @@ export default async function BachelorProgramsPage() {
             rel="noreferrer"
             className="font-bold text-[var(--sea-deep)] hover:underline"
           >
-            Book CEnT-S on CISIA →
+            Book CEnT-S on CISIA â†’
           </a>
           <Link href="/process#tests" className="font-bold text-[var(--sea-deep)] hover:underline">
-            Process page CEnT-S section →
+            Process page CEnT-S section â†’
           </Link>
         </div>
       </section>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
+import { BrandLogo } from "@/components/brand-logo";
 import { getCompanyProfile } from "@/lib/content";
 import { SITE } from "@/lib/site";
 
@@ -17,13 +17,7 @@ export default async function AboutPage() {
     <div className="site-shell page-hero pb-16">
       <p className="eyebrow">Registered consultancy</p>
       <div className="mt-4 flex items-center gap-4">
-        <Image
-          src={SITE.logoSrc}
-          alt={SITE.name}
-          width={64}
-          height={64}
-          className="rounded-full bg-black"
-        />
+        <BrandLogo size={64} />
         <div>
           <h1 className="display text-4xl md:text-5xl">{SITE.name}</h1>
           <p className="mt-1 text-sm font-semibold text-[var(--sea)]">{SITE.tagline}</p>

@@ -1,9 +1,10 @@
-export const dynamic = "force-dynamic";
-
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ProgramExplorer } from "@/components/program-explorer";
 import { getMeta, getPrograms } from "@/lib/data";
+import { PUBLIC_REVALIDATE_SECONDS } from "@/lib/cache";
+
+export const revalidate = PUBLIC_REVALIDATE_SECONDS;
 
 export const metadata: Metadata = {
   title: "Master's Programs in English",
@@ -17,7 +18,7 @@ export default async function MasterProgramsPage() {
   return (
     <div className="site-shell page-hero pb-12 md:pb-16">
       <Link href="/" className="text-sm font-semibold text-[var(--sea-deep)] hover:underline">
-        ← Home
+        â† Home
       </Link>
       <p className="eyebrow mt-6">Intake {meta.intake}</p>
       <h1 className="display mt-3 text-4xl md:text-6xl max-w-4xl">

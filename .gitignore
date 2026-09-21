@@ -30,8 +30,19 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
+# student portal (PII) — never commit or serve
+/data/
+/data/students.json
+/data/uploads/
+/data/consultancy-cases.json
+/data/applications.json
+
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+!.env.generated
+# actually never commit generated secrets either:
+.env.generated
 
 # vercel
 .vercel

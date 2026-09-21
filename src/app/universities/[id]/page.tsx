@@ -1,12 +1,18 @@
-export const dynamic = "force-dynamic";
-
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ExternalLink } from "lucide-react";
+import { JsonLd } from "@/components/json-ld";
 import { StatusBadge } from "@/components/status-badge";
+import { PUBLIC_REVALIDATE_SECONDS } from "@/lib/cache";
 import { getUniversities, getUniversity } from "@/lib/data";
+import {
+  breadcrumbJsonLd,
+  universityJsonLd,
+} from "@/lib/structured-data";
 import { formatAdmissionDate, formatFee, regionLabel } from "@/lib/utils";
+
+export const revalidate = PUBLIC_REVALIDATE_SECONDS;
 
 type Props = { params: Promise<{ id: string }> };
 
@@ -22,6 +28,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${uni.name} admissions`,
     description: `${uni.name} admission portal, English programs, fees, and deadlines for international students.`,
+    alternates: { canonical: `/universities/${uni.id}` },
+    openGraph: {
+      title: `${uni.name} admissions`,
+      description: `${uni.name} in ${uni.city}, Italy â€” portals, fees, and English programmes.`,
+      url: `/universities/${uni.id}`,
+    },
   };
 }
 
@@ -36,18 +48,28 @@ export default async function UniversityDetailPage({ params }: Props) {
 
   return (
     <div className="site-shell py-12 md:py-16">
+      <JsonLd
+        data={[
+          universityJsonLd(uni),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Universities", path: "/universities" },
+            { name: uni.name, path: `/universities/${uni.id}` },
+          ]),
+        ]}
+      />
       <Link
         href="/universities"
         className="text-sm font-semibold text-[var(--sea-deep)] hover:underline"
       >
-        ← All universities
+        â† All universities
       </Link>
 
       <div className="mt-5 flex flex-wrap items-start justify-between gap-4">
         <div>
           <p className="eyebrow">
-            {uni.city}, Italy · {regionLabel(uni.region)}
-            {(uni.region === "lazio" || uni.region === "south") && " · priority desk"}
+            {uni.city}, Italy Â· {regionLabel(uni.region)}
+            {(uni.region === "lazio" || uni.region === "south") && " Â· priority desk"}
           </p>
           <h1 className="display mt-2 text-4xl md:text-6xl max-w-3xl">{uni.name}</h1>
         </div>
@@ -180,8 +202,8 @@ function ProgramGroup({
             <div>
               <div className="font-bold">{program.name}</div>
               <div className="text-sm text-[var(--ink-soft)]">
-                {program.field || "—"}
-                {program.admissionTest ? ` · Test: ${program.admissionTest}` : ""}
+                {program.field || "â€”"}
+                {program.admissionTest ? ` Â· Test: ${program.admissionTest}` : ""}
               </div>
             </div>
             {program.applyUrl ? (

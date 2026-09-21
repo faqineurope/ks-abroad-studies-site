@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { BrandLogo } from "@/components/brand-logo";
 import { SocialLinks } from "@/components/social-links";
 import { SITE } from "@/lib/site";
 
@@ -9,13 +9,7 @@ export function SiteFooter() {
       <div className="site-shell py-12 grid gap-10 lg:grid-cols-[1.3fr_0.9fr_1.1fr]">
         <div>
           <div className="flex items-center gap-3 mb-3">
-            <Image
-              src={SITE.logoSrc}
-              alt={SITE.name}
-              width={56}
-              height={56}
-              className="rounded-full bg-black"
-            />
+            <BrandLogo size={56} />
             <div>
               <div className="display text-2xl leading-none">{SITE.name}</div>
               <div className="mt-1 text-xs font-semibold text-[var(--coral)]">
@@ -72,6 +66,12 @@ export function SiteFooter() {
           </Link>
           <Link href="/agreement" className="block hover:text-[var(--sea)]">
             Consultancy agreement
+          </Link>
+          <Link href="/privacy" className="block hover:text-[var(--sea)]">
+            Privacy Policy
+          </Link>
+          <Link href="/cookies" className="block hover:text-[var(--sea)]">
+            Cookie notice
           </Link>
           <Link href="/contact" className="block hover:text-[var(--sea)]">
             Contact Us

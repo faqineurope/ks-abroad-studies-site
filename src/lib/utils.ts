@@ -36,19 +36,32 @@ export function formatAdmissionDate(
     if (options?.status === "open") return "Now open";
     return "Check portal";
   }
-  const iso = value.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  // Normalize fancy dashes so SSR/client text never diverges on encoding
+  const normalized = value.replace(/[\u2013\u2014\u2212]/g, "-").trim();
+  const iso = normalized.match(/^(\d{4})-(\d{2})-(\d{2})$/);
   if (iso) {
-    const d = new Date(`${iso[1]}-${iso[2]}-${iso[3]}T12:00:00Z`);
-    return d.toLocaleDateString("en-GB", {
-      day: "numeric",
-      month: "short",
-      year: "numeric",
-    });
+    const months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    const day = Number(iso[3]);
+    const month = months[Number(iso[2]) - 1];
+    return `${day} ${month} ${iso[1]}`;
   }
-  if (value.toLowerCase().startsWith("estimated ")) {
-    return value.charAt(0).toUpperCase() + value.slice(1);
+  if (normalized.toLowerCase().startsWith("estimated ")) {
+    return normalized.charAt(0).toUpperCase() + normalized.slice(1);
   }
-  return value;
+  return normalized;
 }
 
 export function regionLabel(region: string): string {

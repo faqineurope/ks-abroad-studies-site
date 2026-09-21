@@ -1,9 +1,10 @@
-export const dynamic = "force-dynamic";
-
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ScholarshipExplorer } from "@/components/scholarship-explorer";
 import { getScholarshipsDataset, getScholarshipRegions } from "@/lib/scholarships";
+import { PUBLIC_REVALIDATE_SECONDS } from "@/lib/cache";
+
+export const revalidate = PUBLIC_REVALIDATE_SECONDS;
 
 export const metadata: Metadata = {
   title: "Italian Regional Scholarships",
@@ -23,7 +24,7 @@ export default async function ScholarshipsPage() {
     <div className="site-shell page-hero pb-12 md:pb-16">
       <p className="eyebrow">Intake {dataset.intake}</p>
       <h1 className="display mt-3 text-4xl md:text-6xl max-w-4xl">
-        Regional scholarships — official portals
+        Regional scholarships â€” official portals
       </h1>
       <p className="mt-5 max-w-3xl text-lg text-[var(--ink-soft)] leading-relaxed">
         Filter by area for DiSCo / ERSU / ADISU portals. Pakistani document

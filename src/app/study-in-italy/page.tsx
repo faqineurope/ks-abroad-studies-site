@@ -1,10 +1,11 @@
-export const dynamic = "force-dynamic";
-
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { getMeta } from "@/lib/data";
 import { formatAdmissionDate } from "@/lib/utils";
+import { PUBLIC_REVALIDATE_SECONDS } from "@/lib/cache";
+
+export const revalidate = PUBLIC_REVALIDATE_SECONDS;
 
 export const metadata: Metadata = {
   title: "Study in Italy",
@@ -19,7 +20,7 @@ export default async function StudyInItalyPage() {
     {
       href: "/universities",
       title: "Universities",
-      body: `${meta.universityCount} universities — ${meta.openCount} open, ${meta.soonCount} opening soon, ${meta.closedCount} closed for non-EU this session.`,
+      body: `${meta.universityCount} universities â€” ${meta.openCount} open, ${meta.soonCount} opening soon, ${meta.closedCount} closed for non-EU this session.`,
     },
     {
       href: "/programs/master",
@@ -34,12 +35,12 @@ export default async function StudyInItalyPage() {
     {
       href: "/programs/single-cycle",
       title: "Single-cycle (Medicine)",
-      body: `MBBS, Dentistry, Veterinary + IMAT — ${meta.singleCycleCount} programmes.`,
+      body: `MBBS, Dentistry, Veterinary + IMAT â€” ${meta.singleCycleCount} programmes.`,
     },
     {
       href: "/phd",
       title: "PhD / Dottorato",
-      body: "A–Z procedure, PICA portal, English-friendly PhD courses.",
+      body: "Aâ€“Z procedure, PICA portal, English-friendly PhD courses.",
     },
     {
       href: "/guides",
@@ -54,7 +55,7 @@ export default async function StudyInItalyPage() {
     {
       href: "/erasmus",
       title: "Erasmus Mundus 2027",
-      body: "Separate section — autumn 2026 applications for 2027 starts.",
+      body: "Separate section â€” autumn 2026 applications for 2027 starts.",
     },
     {
       href: "/process",
@@ -77,7 +78,7 @@ export default async function StudyInItalyPage() {
     <div className="site-shell py-12 md:py-16">
       <p className="eyebrow">Intake {meta.intake}</p>
       <h1 className="display mt-3 text-4xl md:text-6xl max-w-4xl">
-        Study in Italy — desk for Pakistani students
+        Study in Italy â€” desk for Pakistani students
       </h1>
       <p className="mt-5 max-w-3xl text-lg text-[var(--ink-soft)] leading-relaxed">
         Everything kept section-wise: programmes, PhD, guides, scholarships, and
@@ -85,7 +86,7 @@ export default async function StudyInItalyPage() {
       </p>
 
       <div className="mt-8 panel rounded-3xl p-6 md:p-8">
-        <p className="eyebrow">MUR · Universitaly</p>
+        <p className="eyebrow">MUR Â· Universitaly</p>
         <h2 className="display mt-2 text-3xl md:text-4xl">
           Pre-enrolment deadline:{" "}
           {formatAdmissionDate(meta.universitalyPreEnrolmentDeadline)}

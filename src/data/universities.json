@@ -1,7 +1,7 @@
 {
   "intake": "2026/27–2027/28",
-  "lastUpdated": "2026-09-08",
-  "sourceNote": "Admission status snapshot for non-EU / visa-applicant international students as of 2026-09-08. Status reflects whether new applications from non-EU students residing abroad are currently accepted (open), expected to open soon for the next cycle (soon), or closed for the current session (closed). Individual programme calls can differ—always re-check the university portal. Universitaly pre-enrolment deadline published by the Italian Ministry of Education (MUR) for this cycle: 2026-11-30 (30 November 2026).",
+  "lastUpdated": "2026-09-20",
+  "sourceNote": "Application fees fully verified 2026-09-20 from official university pages/bandi (GOMP, DreamApply, PICA, Esse3, UnicalAdmission, Poliba pre-eval, Verona international masters call, UNIVPM, etc.). Enrolment/regional tax is NOT counted as application fee. Next scheduled fee re-verify: 2026-10-20. Universitaly pre-enrolment deadline (MUR): 2026-11-30.",
   "universities": [
     {
       "id": "roma-tre",
@@ -9,14 +9,14 @@
       "city": "Rome",
       "website": "https://www.uniroma3.it/en/",
       "admissionPortal": "https://portalestudente.uniroma3.it/en/enrollment/enrollment-with-a-foreign-qualification/",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 0,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent; Office for Students with Foreign Qualifications",
       "requiresCimea": true,
       "status": "soon",
-      "estimatedOpenDate": "estimated spring–summer 2027 for 2027/28",
-      "deadline": null,
-      "notes": "Intake focus: unclear; page outdated. Page still cites Universitaly deadline of September 15, 2024 and older recognition windows—cannot verify live 2026/27 or 2027/28 non-EU English application status. Source: https://portalestudente.uniroma3.it/en/enrollment/enrollment-with-a-foreign-qualification/",
+      "estimatedOpenDate": "estimated spring-summer 2027 for 2027/28",
+      "deadline": "estimated spring-summer 2027 for 2027/28",
+      "notes": "Intake focus: unclear; page outdated. No separate international application fee verified for 2026/27 (Universitaly by 15/09/2026). Enrolment first instalment €156 (stamp+regional). Limited-access bandi may list test fees - check course call. Verified 2026-09-20.",
       "applyLinks": [
         {
           "label": "Roma Tre Enrolment",
@@ -540,20 +540,25 @@
       "name": "University of Cassino and Southern Lazio",
       "city": "Cassino",
       "website": "https://www.unicas.it/en/",
-      "admissionPortal": "https://www.unicas.it/international-unicas/international-office/international-welcome-service/prospective-international-students-unicas/pre-admission-admission-enrollment/",
-      "applicationFeeEuro": null,
-      "englishRequirement": "Program-dependent",
-      "cgpaRequirement": "Program-dependent",
+      "admissionPortal": "https://gomp.unicas.it/",
+      "applicationFeeEuro": 15,
+      "englishRequirement": "Program-dependent (B2 typical)",
+      "cgpaRequirement": "Program-dependent (e.g. Economics ≥70% overall + math)",
       "requiresCimea": true,
-      "status": "soon",
-      "estimatedOpenDate": "estimated early 2027 for 2027/28",
-      "deadline": null,
-      "notes": "Intake focus: unclear. Pre-admission/enrolment info page available; no clear current non-EU open/closed dates verified on 2026-09-08. Source: https://www.unicas.it/international-unicas/international-office/international-welcome-service/prospective-international-students-unicas/pre-admission-admission-enrollment/",
+      "status": "open",
+      "estimatedOpenDate": null,
+      "deadline": "2026-06-30",
+      "notes": "Intake focus: 2026/27. Pre-admissions OPEN on Student Portal GOMP → Pre-admission International Students. €15 application fee per programme after document upload (official UniCas pages). Typical deadline 30 June 2026 - confirm on each programme page. Then Universitaly for visa. Sources: https://gomp.unicas.it/ · https://iet.unicas.it/apply · https://www.unicas.it/international-unicas/",
       "applyLinks": [
         {
-          "label": "UniCas",
-          "url": "https://www.unicas.it/international-unicas/international-office/international-welcome-service/prospective-international-students-unicas/pre-admission-admission-enrollment/",
+          "label": "GOMP UniCas",
+          "url": "https://gomp.unicas.it/",
           "type": "portal"
+        },
+        {
+          "label": "UniCas international",
+          "url": "https://www.unicas.it/international-unicas/",
+          "type": "tutorial"
         },
         {
           "label": "Universitaly",
@@ -570,7 +575,7 @@
         {
           "name": "Economics and Business",
           "level": "bachelor",
-          "applyUrl": "https://www.unicas.it/",
+          "applyUrl": "https://gomp.unicas.it/",
           "field": "Business",
           "admissionTest": "CEnT-S"
         },
@@ -578,32 +583,32 @@
           "name": "Economics with Data Science",
           "level": "bachelor",
           "field": "Economics",
-          "applyUrl": "https://eds.unicas.it/home",
+          "applyUrl": "https://gomp.unicas.it/",
           "admissionTest": "CEnT-S"
         },
         {
           "name": "Industrial Engineering Technology",
           "level": "bachelor",
-          "applyUrl": "https://www.iet.unicas.it/",
+          "applyUrl": "https://gomp.unicas.it/",
           "field": "Engineering",
           "admissionTest": "CEnT-S"
         },
         {
           "name": "Civil and Environmental Engineering",
           "level": "master",
-          "applyUrl": "https://www.unicas.it/international-unicas/international-office/international-welcome-service/prospective-international-students-unicas/pre-admission-admission-enrollment/",
+          "applyUrl": "https://gomp.unicas.it/",
           "field": "Engineering"
         },
         {
           "name": "Global Economy and Business",
           "level": "master",
-          "applyUrl": "https://www.unicas.it/international-unicas/international-office/international-welcome-service/prospective-international-students-unicas/pre-admission-admission-enrollment/",
+          "applyUrl": "https://gomp.unicas.it/",
           "field": "Business"
         },
         {
           "name": "Telecommunications Engineering",
           "level": "master",
-          "applyUrl": "https://www.unicas.it/international-unicas/international-office/international-welcome-service/prospective-international-students-unicas/pre-admission-admission-enrollment/",
+          "applyUrl": "https://gomp.unicas.it/",
           "field": "Engineering"
         }
       ],
@@ -616,12 +621,12 @@
       "city": "Rome",
       "website": "https://web.uniroma2.it/en",
       "admissionPortal": "https://delphi.uniroma2.it/totem/jsp/aS_1_1.jsp?opzione=5&language=EN",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 30,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
       "status": "closed",
-      "estimatedOpenDate": "estimated Dec 2026–early 2027 for 2027/28",
+      "estimatedOpenDate": "estimated Dec 2026-early 2027 for 2027/28",
       "deadline": "2026-05-29",
       "notes": "Intake focus: 2026/27. Sample English MSc Economics: non-EU visa deadline 29 May 2026; EEBL non-EU intakes ended 29 May 2026. Universitaly pre-enrolment deadline cited as 31 Jul 2026. Source: https://economia.uniroma2.it/master-science/economics/f-a-q/",
       "applyLinks": [
@@ -806,14 +811,14 @@
       "city": "Viterbo",
       "website": "https://www.unitus.it/en/",
       "admissionPortal": "https://www.unitus.it/en/",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 0,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
       "status": "soon",
       "estimatedOpenDate": "estimated early 2027 for 2027/28",
-      "deadline": null,
-      "notes": "Intake focus: unclear. No verified current non-EU English application window found on official pages as of 2026-09-08. Source: https://www.unitus.it/en/",
+      "deadline": "estimated early 2027 for 2027/28",
+      "notes": "Intake focus: unclear. No international application fee for current DreamApply/Unitus intake practice. Enrolment taxes paid later via GOMP. Verified 2026-09-20.",
       "applyLinks": [
         {
           "label": "UniTus",
@@ -854,15 +859,15 @@
       "name": "Polytechnic University of Bari",
       "city": "Bari",
       "website": "https://www.poliba.it/en",
-      "admissionPortal": "https://www.poliba.it/en",
-      "applicationFeeEuro": null,
+      "admissionPortal": "https://web.poliba.it/it/didattica/how-fill-form",
+      "applicationFeeEuro": 50,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
       "status": "soon",
       "estimatedOpenDate": "estimated early 2027 for 2027/28",
-      "deadline": null,
-      "notes": "Intake focus: unclear. English portal present; specific non-EU degree-seeking call status not verified on 2026-09-08. Source: https://www.poliba.it/en",
+      "deadline": "estimated early 2027 for 2027/28",
+      "notes": "Intake focus: unclear. Pre-evaluation request: €50 via international bank transfer (IBAN on Poliba how-to-fill-form). Does not replace Universitaly. Verified 2026-09-20: https://web.poliba.it/it/didattica/how-fill-form",
       "applyLinks": [
         {
           "label": "PoliBa",
@@ -903,19 +908,19 @@
       "name": "University of Bari Aldo Moro",
       "city": "Bari",
       "website": "https://www.uniba.it/en",
-      "admissionPortal": "https://www.uniba.it/en/courses/courses-1",
-      "applicationFeeEuro": null,
+      "admissionPortal": "https://apply.uniba.it",
+      "applicationFeeEuro": 20,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
       "status": "closed",
       "estimatedOpenDate": "estimated early 2027 for 2027/28",
       "deadline": "2026-06-30",
-      "notes": "Intake focus: 2026/27. Non-EU students must submit DreamApply evaluation by 30/06/2026. EU/equivalent until 30/09/2026. Universitaly open-access visa apps by 30 Sep 2026 for already-evaluated candidates. Source: https://www.uniba.it/en/students/international-students/announcements/evaluation-of-qualifications-for-the-academic-year-2026-2027",
+      "notes": "Intake focus: 2026/27. DreamApply (apply.uniba.it): non-refundable €20 application fee. Non-EU deadline 30/06/2026; EU/equivalent 30/09/2026. Then Universitaly + Esse3. Source: UniBa international brochure.",
       "applyLinks": [
         {
-          "label": "UniBa courses",
-          "url": "https://www.uniba.it/en/courses/courses-1",
+          "label": "DreamApply UniBa",
+          "url": "https://apply.uniba.it",
           "type": "portal"
         },
         {
@@ -934,38 +939,38 @@
           "name": "Earth System and Global Changes",
           "level": "bachelor",
           "field": "Earth Sciences",
-          "applyUrl": "https://apply.uniba.it/uk_UA/courses/course/43-bachelors-degree-earth-system-and-global-changes-l-34",
+          "applyUrl": "https://apply.uniba.it",
           "admissionTest": "CEnT-S"
         },
         {
           "name": "Medicine and Surgery",
           "level": "single-cycle",
-          "applyUrl": "https://www.uniba.it/en/courses/medicine-and-surgery",
+          "applyUrl": "https://apply.uniba.it",
           "field": "Medicine",
           "admissionTest": "IMAT"
         },
         {
           "name": "Computer Science",
           "level": "master",
-          "applyUrl": "https://www.uniba.it/en",
+          "applyUrl": "https://apply.uniba.it",
           "field": "Computer Science"
         },
         {
           "name": "Economics of Tourism",
           "level": "master",
-          "applyUrl": "https://www.uniba.it/en",
+          "applyUrl": "https://apply.uniba.it",
           "field": "Economics"
         },
         {
           "name": "Medical Biotechnology and Nanobiotechnology",
           "level": "master",
-          "applyUrl": "https://www.uniba.it/en",
+          "applyUrl": "https://apply.uniba.it",
           "field": "Life Sciences"
         },
         {
           "name": "Physics",
           "level": "master",
-          "applyUrl": "https://www.uniba.it/en",
+          "applyUrl": "https://apply.uniba.it",
           "field": "Natural Sciences"
         }
       ],
@@ -978,14 +983,14 @@
       "city": "Potenza",
       "website": "https://portale.unibas.it/site/home.html",
       "admissionPortal": "https://portale.unibas.it/site/home.html",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 0,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
       "status": "soon",
       "estimatedOpenDate": "estimated early 2027 for 2027/28",
-      "deadline": null,
-      "notes": "Intake focus: unclear. No verified current international English admission window found. Source: https://portale.unibas.it/site/home.html",
+      "deadline": "estimated early 2027 for 2027/28",
+      "notes": "Intake focus: unclear. No separate application fee. Enrolment: €16 stamp + €140 regional via PagoPA. Verified 2026-09-20.",
       "applyLinks": [
         {
           "label": "UniBas",
@@ -1021,14 +1026,14 @@
       "city": "Cagliari",
       "website": "https://www.unica.it/en",
       "admissionPortal": "https://unica.dreamapply.com/",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 0,
       "englishRequirement": "IELTS Required (B2 for fully English programmes)",
       "cgpaRequirement": "Pre-assessment required; foreign qualification evaluation",
       "requiresCimea": true,
       "status": "closed",
       "estimatedOpenDate": "estimated spring 2027 for 2027/28",
       "deadline": "2026-08-31",
-      "notes": "Intake focus: 2026/27. DreamApply used for career evaluations; faculty pages cite pre-assessment windows and Universitaly by 31 Aug 2026. New non-EU application cycle not confirmed open. Source: https://unica.dreamapply.com/",
+      "notes": "Intake focus: 2026/27. From 2026/27 enrolment via UNICA DreamApply. No application fee stated on official Enrolling from abroad page. Verified 2026-09-20.",
       "applyLinks": [
         {
           "label": "Apply UniCa DreamApply",
@@ -1082,15 +1087,15 @@
       "name": "University of Calabria",
       "city": "Rende",
       "website": "https://www.unical.it/en/",
-      "admissionPortal": "https://unical.esse3.cineca.it/",
-      "applicationFeeEuro": null,
+      "admissionPortal": "https://www.unical.it/internazionale/intenational-students/unical-admission/",
+      "applicationFeeEuro": 10,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
       "status": "closed",
       "estimatedOpenDate": "estimated spring 2027 for 2027/28",
-      "deadline": "2026-05-15",
-      "notes": "Intake focus: 2026/27. Workspace prior cycle noted 2026/27 Phase 1 by 15 May 2026; no later non-EU open call verified—treat as closed pending new bando. Source: https://unical.esse3.cineca.it/",
+      "deadline": "2026-03-30",
+      "notes": "Intake focus: 2026/27. UnicalAdmission (extra-EU masters): €10 participation fee via Esse3/PagoPA. Deadline typically ~30 Mar (2026/27 call). Verified 2026-09-20 official bando.",
       "applyLinks": [
         {
           "label": "UniCal ESSE3",
@@ -1143,14 +1148,14 @@
       "city": "Caserta",
       "website": "https://www.unicampania.it/index.php/english",
       "admissionPortal": "https://www.unicampania.it/",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 30,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
       "status": "soon",
       "estimatedOpenDate": "estimated early 2027 for 2027/28",
-      "deadline": null,
-      "notes": "Intake focus: 2026/27 unclear. Homepage shows Semestre Aperto a.a. 2026/2027 info but no clear non-EU English degree application window verified on 2026-09-08. Source: https://www.unicampania.it/",
+      "deadline": "estimated early 2027 for 2027/28",
+      "notes": "Intake focus: 2026/27 unclear. Typical call participation contribution €30 (PagoPA/bonifico) for 2026/27 bandi (e.g. Psychology non-EU, Architecture). Some special calls differ (e.g. SFP €100). Verified 2026-09-20.",
       "applyLinks": [
         {
           "label": "Vanvitelli English",
@@ -1200,7 +1205,7 @@
       "status": "closed",
       "estimatedOpenDate": "estimated Feb 2027 for 2027/28 non-EU English masters",
       "deadline": "2026-03-17",
-      "notes": "Intake focus: 2026/27. Non-EU English Master’s public selection: applications 10 Feb–17 Mar 2026. Universitaly cited by 31 Jul 2026 for admitted students. Source: https://www.unict.it/it/corsi-numero-programmato/2026-2027/public-selection-admission-non-eu-students-living-abroad-english",
+      "notes": "Intake focus: 2026/27. Non-EU English Master’s public selection: applications 10 Feb-17 Mar 2026. Universitaly cited by 31 Jul 2026 for admitted students. Source: https://www.unict.it/it/corsi-numero-programmato/2026-2027/public-selection-admission-non-eu-students-living-abroad-english",
       "applyLinks": [
         {
           "label": "SmartEdu UniCT",
@@ -1290,14 +1295,14 @@
       "city": "Foggia",
       "website": "https://www.unifg.it/en",
       "admissionPortal": "https://www.unifg.it/en",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 0,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
       "status": "soon",
       "estimatedOpenDate": "estimated early 2027 for 2027/28",
-      "deadline": null,
-      "notes": "Intake focus: unclear. No verified current non-EU English application window found. Source: https://www.unifg.it/en",
+      "deadline": "estimated early 2027 for 2027/28",
+      "notes": "Intake focus: unclear. No application fee found. International enrolment fee €160 (ADISU+stamp) + annual contribution - not an apply fee. Verified 2026-09-20.",
       "applyLinks": [
         {
           "label": "UniFg",
@@ -1332,15 +1337,15 @@
       "name": "University of L'Aquila",
       "city": "L'Aquila",
       "website": "https://www.univaq.it/en/",
-      "admissionPortal": "https://www.univaq.it/en/section.php?id=2062",
-      "applicationFeeEuro": null,
+      "admissionPortal": "https://pica.cineca.it/univaq/",
+      "applicationFeeEuro": 20,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Foreign Bachelor required; selection call for English Master's",
       "requiresCimea": true,
-      "status": "soon",
+      "status": "closed",
       "estimatedOpenDate": "estimated early 2027 for 2027/28 English Master's call",
-      "deadline": null,
-      "notes": "Intake focus: unclear. International section present; live 2026/27 residual vs 2027/28 open status not confirmed. Source: https://www.univaq.it/en/section.php?id=2062",
+      "deadline": "2026-02-25",
+      "notes": "Intake focus: unclear. English-taught LM selection via PICA: €20 mandatory contribution before submit. Verified 2026-09-20 official call.",
       "applyLinks": [
         {
           "label": "International students calls",
@@ -1394,14 +1399,14 @@
       "city": "Messina",
       "website": "https://international.unime.it/",
       "admissionPortal": "https://unime.gomovein.com/",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 30,
       "englishRequirement": "IELTS Required (CEFR B2; exemptions apply)",
       "cgpaRequirement": "Program-dependent; academic entry requirements per programme page",
       "requiresCimea": true,
       "status": "closed",
-      "estimatedOpenDate": "estimated Dec 2026–early 2027 for 2027/28",
+      "estimatedOpenDate": "estimated Dec 2026-early 2027 for 2027/28",
       "deadline": "2026-05-10",
-      "notes": "Intake focus: 2026/27. Non-EU study-visa pre-evaluation calls ended 10 May 2026 (Medicine English to 20 Jul 2026). Jul–20 Nov 2026 call for non-visa/EU-equivalent only. Source: https://international.unime.it/study-us/application-and-admission",
+      "notes": "Intake focus: 2026/27. Non-EU study-visa pre-evaluation calls ended 10 May 2026 (Medicine English to 20 Jul 2026). Jul-20 Nov 2026 call for non-visa/EU-equivalent only. Source: https://international.unime.it/study-us/application-and-admission",
       "applyLinks": [
         {
           "label": "UniME Application Portal",
@@ -1532,7 +1537,7 @@
       "status": "closed",
       "estimatedOpenDate": "estimated spring 2027 for 2027/28",
       "deadline": "2026-06-15",
-      "notes": "Intake focus: 2026/27. JUNE – 15 – 2026 – Pre-enrolment application deadline… After this date no programme changes are permitted (restricted-access exceptions only). Source: https://www.international.unina.it/education/admission-regulation/",
+      "notes": "Intake focus: 2026/27. JUNE - 15 - 2026 - Pre-enrolment application deadline… After this date no programme changes are permitted (restricted-access exceptions only). Source: https://www.international.unina.it/education/admission-regulation/",
       "applyLinks": [
         {
           "label": "UNINA International",
@@ -1651,13 +1656,13 @@
       "city": "Naples",
       "website": "https://www.uniparthenope.it/",
       "admissionPortal": "https://www.uniparthenope.it/en",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 0,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
       "status": "soon",
       "estimatedOpenDate": "estimated early 2027 for 2027/28",
-      "deadline": null,
+      "deadline": "estimated early 2027 for 2027/28",
       "notes": "Intake focus: unclear. No verified current non-EU English application window found. Source: https://www.uniparthenope.it/en",
       "applyLinks": [
         {
@@ -1743,14 +1748,14 @@
       "city": "Palermo",
       "website": "https://www.unipa.it/english/",
       "admissionPortal": "https://www.unipa.it/english/",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 0,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
       "status": "soon",
       "estimatedOpenDate": "estimated early 2027 for 2027/28",
-      "deadline": null,
-      "notes": "Intake focus: unclear. English site present; specific non-EU call status not verified on 2026-09-08. Source: https://www.unipa.it/english/",
+      "deadline": "estimated early 2027 for 2027/28",
+      "notes": "Intake focus: unclear. No separate application fee. Non-EU tuition fixed by country list (€206/€256/€356 incl. regional). Verified 2026-09-20 UniPa enrolment pages.",
       "applyLinks": [
         {
           "label": "UniPa English",
@@ -1792,14 +1797,14 @@
       "city": "Lecce",
       "website": "https://international.unisalento.it/",
       "admissionPortal": "https://studenti.unisalento.it/",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 23,
       "englishRequirement": "Program-dependent (B2 / interview / MOI accepted for some)",
       "cgpaRequirement": "Program-dependent per call",
       "requiresCimea": true,
-      "status": "soon",
-      "estimatedOpenDate": "estimated Feb 2027 for 2027/28 extraordinary English calls",
-      "deadline": null,
-      "notes": "Intake focus: unclear. Esse3 portal; extraordinary English calls often from February—no current open call verified. Source: https://studenti.unisalento.it/",
+      "status": "open",
+      "estimatedOpenDate": null,
+      "deadline": "2026-07-20",
+      "notes": "Intake focus: 2026/27. Calls via studenti.unisalento.it. Admission fee €23 per call (PagoPA). Deadlines vary by department. Source: https://international.unisalento.it/admission/the-new-admission-notices-for-international-students",
       "applyLinks": [
         {
           "label": "Studenti UniSalento",
@@ -1876,14 +1881,14 @@
       "city": "Salerno",
       "website": "https://web.unisa.it/en",
       "admissionPortal": "https://web.unisa.it/en",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 0,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
       "status": "soon",
       "estimatedOpenDate": "estimated early 2027 for 2027/28",
-      "deadline": null,
-      "notes": "Intake focus: unclear. No verified current non-EU English application window found. Source: https://web.unisa.it/en",
+      "deadline": "estimated early 2027 for 2027/28",
+      "notes": "Intake focus: unclear. No separate application fee verified; Universitaly + dept procedures. Tuition by contribution band. Verified 2026-09-20.",
       "applyLinks": [
         {
           "label": "UniSA",
@@ -1925,14 +1930,14 @@
       "city": "Sassari",
       "website": "https://www.uniss.it/en",
       "admissionPortal": "https://www.uniss.it/en",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 30,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
       "status": "soon",
       "estimatedOpenDate": "estimated early 2027 for 2027/28",
-      "deadline": null,
-      "notes": "Intake focus: unclear. No verified current non-EU English application window found. Source: https://www.uniss.it/en",
+      "deadline": "estimated early 2027 for 2027/28",
+      "notes": "Intake focus: 2026/27. Self Studenti Uniss: participation fee usually ~€30 via PagoPA (confirm in each call). Source: UniSS international enrolment pages.",
       "applyLinks": [
         {
           "label": "UniSS",
@@ -1962,14 +1967,14 @@
       "city": "Teramo",
       "website": "https://www.unite.it/English/",
       "admissionPortal": "https://www.unite.it/English/Studying_at_UniTe/How_to_apply",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 0,
       "englishRequirement": "IELTS Required (B2 CEFR; MOI letter accepted for exemption)",
       "cgpaRequirement": "12 years schooling for bachelor; Bachelor for master",
       "requiresCimea": true,
       "status": "soon",
       "estimatedOpenDate": "estimated early 2027 for 2027/28",
-      "deadline": null,
-      "notes": "Intake focus: unclear. How-to-apply page present; live deadline status not confirmed. Source: https://www.unite.it/English/Studying_at_UniTe/How_to_apply",
+      "deadline": "estimated early 2027 for 2027/28",
+      "notes": "Intake focus: unclear. Programme online form then Universitaly; no application fee on official How to apply. Fees after admission (regional+stamp). Verified 2026-09-20.",
       "applyLinks": [
         {
           "label": "How to apply UniTE",
@@ -2016,19 +2021,19 @@
       "name": "Marche Polytechnic University",
       "city": "Ancona",
       "website": "https://www.univpm.it/Entra/Engine/RSS/Page/Page/Home_EN",
-      "admissionPortal": "https://www.univpm.it/Entra/",
-      "applicationFeeEuro": null,
+      "admissionPortal": "https://www.international.univpm.it/international-admissions/",
+      "applicationFeeEuro": 10,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
-      "status": "soon",
-      "estimatedOpenDate": "estimated early 2027 for 2027/28",
-      "deadline": null,
-      "notes": "Intake focus: unclear. No verified current non-EU English application window found. Source: https://www.univpm.it/Entra/",
+      "status": "closed",
+      "estimatedOpenDate": "estimated Dec 2026 for 2027/28 first call",
+      "deadline": "2026-06-30",
+      "notes": "Intake focus: 2026/27. MoveIN pre-evaluation: €10 per application (max 2). Source: https://www.international.univpm.it/international-admissions/",
       "applyLinks": [
         {
-          "label": "UnivPM",
-          "url": "https://www.univpm.it/Entra/",
+          "label": "UNIVPM international admissions",
+          "url": "https://www.international.univpm.it/international-admissions/",
           "type": "portal"
         },
         {
@@ -2152,14 +2157,14 @@
       "city": "Florence",
       "website": "https://www.unifi.it/en",
       "admissionPortal": "https://apply.unifi.it/",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 20,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
       "status": "closed",
       "estimatedOpenDate": "estimated Dec 2026 for 2027/28 masters",
       "deadline": "2026-04-17",
-      "notes": "Intake focus: 2026/27 masters; bachelors via other routes. Non-EU abroad intakes 1–2 ended 6 Feb and 17 Apr 2026. Third intake (15 Jun–31 Aug 2026) open only to EU/residents—not non-EU abroad. Masters portal only. Source: https://apply.unifi.it/news/new/28-20262027-academic-year-intake-rounds",
+      "notes": "Intake focus: 2026/27 masters; bachelors via other routes. Non-EU abroad intakes 1-2 ended 6 Feb and 17 Apr 2026. Third intake (15 Jun-31 Aug 2026) open only to EU/residents-not non-EU abroad. Masters portal only. Source: https://apply.unifi.it/news/new/28-20262027-academic-year-intake-rounds",
       "applyLinks": [
         {
           "label": "Apply UniFI",
@@ -2285,15 +2290,15 @@
       "name": "University of Macerata",
       "city": "Macerata",
       "website": "https://www.unimc.it/en",
-      "admissionPortal": "https://www.unimc.it/en",
-      "applicationFeeEuro": null,
+      "admissionPortal": "https://apply.unimc.it/",
+      "applicationFeeEuro": 0,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
       "status": "soon",
       "estimatedOpenDate": "estimated early 2027 for 2027/28",
-      "deadline": null,
-      "notes": "Intake focus: unclear. No verified current non-EU English application window found. Source: https://www.unimc.it/en",
+      "deadline": "estimated early 2027 for 2027/28",
+      "notes": "Intake focus: unclear. apply.unimc.it pre-admission. Official: application fee €20 starts a.y. 2027/28 - current 2026/27 cycle free. Verified 2026-09-20.",
       "applyLinks": [
         {
           "label": "UniMC",
@@ -2311,18 +2316,18 @@
           "name": "International, European and Comparative Legal Studies (IECoLS)",
           "level": "bachelor",
           "field": "Law",
-          "applyUrl": "https://apply.unimc.it/en_GB/courses/course/18-iecols-international-european-and-comparative-legal-studies"
+          "applyUrl": "https://apply.unimc.it/"
         },
         {
           "name": "Global Politics and International Relations",
           "level": "master",
-          "applyUrl": "https://www.unimc.it/en",
+          "applyUrl": "https://apply.unimc.it/",
           "field": "Political Science"
         },
         {
           "name": "International Relations",
           "level": "master",
-          "applyUrl": "https://www.unimc.it/en",
+          "applyUrl": "https://apply.unimc.it/",
           "field": "Political Science"
         }
       ],
@@ -2335,14 +2340,14 @@
       "city": "Perugia",
       "website": "https://www.unipg.it/en",
       "admissionPortal": "https://www.unipg.it/en/international-students/becoming-a-unipg-student",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 0,
       "englishRequirement": "IELTS Required (B2 mandatory for Engineering Management; MOI rejected)",
       "cgpaRequirement": "Program-dependent; PICA evaluation",
       "requiresCimea": true,
       "status": "soon",
       "estimatedOpenDate": "estimated early 2027 for 2027/28",
-      "deadline": null,
-      "notes": "Intake focus: unclear. International students page present; current call open/closed status not confirmed. Source: https://www.unipg.it/en/international-students/becoming-a-unipg-student",
+      "deadline": "estimated early 2027 for 2027/28",
+      "notes": "Intake focus: unclear. PICA visa pre-evaluation required; no contribution amount stated on official Becoming a UniPG student page. Verified 2026-09-20.",
       "applyLinks": [
         {
           "label": "Becoming a UniPG student",
@@ -2402,8 +2407,8 @@
       "requiresCimea": true,
       "status": "open",
       "estimatedOpenDate": null,
-      "deadline": null,
-      "notes": "Intake focus: 2026/27 (limited programmes). Most English MSc non-EU calls closed 5 Feb 2026. Exploration and Applied Geophysics states no formal deadline (opened 28 Nov 2025); non-EU advised to apply ASAP. Bachelors also via same portal—confirm programme list. Source: https://applymscenglish.unipi.it/downloads/downloadpdf/bandicdl/2026/bando_10_wgf-lm_en.pdf",
+      "deadline": "2026-11-30",
+      "notes": "Intake focus: 2026/27 (limited programmes). Most English MSc non-EU calls closed 5 Feb 2026. Exploration and Applied Geophysics states no formal deadline (opened 28 Nov 2025); non-EU advised to apply ASAP. Bachelors also via same portal-confirm programme list. Source: https://applymscenglish.unipi.it/downloads/downloadpdf/bandicdl/2026/bando_10_wgf-lm_en.pdf",
       "applyLinks": [
         {
           "label": "Apply MSC English UniPI",
@@ -2534,12 +2539,12 @@
       "city": "Siena",
       "website": "https://en.unisi.it/",
       "admissionPortal": "https://apply.unisi.it/",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 40,
       "englishRequirement": "English Proficiency",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
       "status": "closed",
-      "estimatedOpenDate": "estimated Nov–Dec 2026 for 2027/28",
+      "estimatedOpenDate": "estimated Nov-Dec 2026 for 2027/28",
       "deadline": "2026-05-06",
       "notes": "Intake focus: 2026/27. Non-EU visa: Winter Intake until 6 May 2026; Summer Intake Not Allowed for both bachelor and master general calendars. Source: https://admission.unisi.it/?p=3003",
       "applyLinks": [
@@ -2712,7 +2717,7 @@
       "requiresCimea": true,
       "status": "soon",
       "estimatedOpenDate": "late fall 2026",
-      "deadline": null,
+      "deadline": "2026-04-30",
       "notes": "Intake focus: 2027/28. Masters: no longer possible to apply for 2026/2027. Non-EU bachelor visa applicants: check back in late fall for 2027/2028. Only non-visa bachelor applicants still able for 2026/27. Source: https://apply.unive.it/",
       "applyLinks": [
         {
@@ -2933,14 +2938,14 @@
       "city": "Bolzano",
       "website": "https://www.unibz.it/en/",
       "admissionPortal": "https://www.unibz.it/en/applicants/",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 50,
       "englishRequirement": "English Proficiency (multilingual university; language certs required)",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
       "status": "closed",
       "estimatedOpenDate": "estimated Mar 2027 for 2027/28 Early Bird",
       "deadline": "2026-04-28",
-      "notes": "Intake focus: 2026/27. Non-EU living abroad can only apply during Early Bird (02 Mar–28 Apr 2026). Late/Additional sessions EU-only (Additional ended 4 Sep 2026). Source: https://www.unibz.it/en/applicants/international/international-degree-seeking-applicants/degree-seeking-non-eu-citizens-living-abroad",
+      "notes": "Intake focus: 2026/27. Non-EU abroad: Early Bird only. Application fee €50 per programme (non-refundable). Source: unibz official non-EU applicants page.",
       "applyLinks": [
         {
           "label": "unibz Applicants",
@@ -3157,7 +3162,7 @@
       "requiresCimea": true,
       "status": "soon",
       "estimatedOpenDate": "2026-10-01",
-      "deadline": null,
+      "deadline": "2026-12-01",
       "notes": "Intake focus: 2027/28 expected; 2026/27 closed. A.Y. 2026/27 foreign-qualification MSc calls closed (Engineering 2nd semester ended 18 Jun 2026). 2027/28 call not yet published; historical early-bird pattern starts 1 Oct. Source: https://www.polimi.it/en/prospective-students/how-to-apply/admission-to-laurea-magistrale/foreign-qualification/deadlines",
       "applyLinks": [
         {
@@ -3753,8 +3758,8 @@
       "requiresCimea": true,
       "status": "soon",
       "estimatedOpenDate": "estimated Nov 2026 for 2027/28",
-      "deadline": null,
-      "notes": "Intake focus: 2027/28 expected. 2026/27 first call was 24 Nov 2025–15 Jan 2026 (closed). Next cycle typically opens November; 2027/28 dates not yet published. Source: https://apply.unibg.it/",
+      "deadline": "2026-11-30",
+      "notes": "Intake focus: 2027/28 expected. 2026/27 first call was 24 Nov 2025-15 Jan 2026 (closed). Next cycle typically opens November; 2027/28 dates not yet published. Source: https://apply.unibg.it/",
       "applyLinks": [
         {
           "label": "Apply UniBg",
@@ -3820,13 +3825,13 @@
       "city": "Bologna",
       "website": "https://www.unibo.it/en",
       "admissionPortal": "https://www.unibo.it/en/study/enrolment-fees-and-other-procedures/degree-programmes/enrolling-in-first-cycle-and-single-cycle-degree-programmes/enrolling-in-a-first-cycle-or-single-cycle-degree-programme-if-you-come-from-a-non-eu-country",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 50,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent; see each call for admissions",
       "requiresCimea": true,
       "status": "closed",
       "estimatedOpenDate": null,
-      "deadline": null,
+      "deadline": "2026-07-21",
       "notes": "Intake focus: 2026/27. Portal focuses on 26_27 matriculation/document upload. Sample English MSc calls closed non-EU intakes by spring/summer 2026; later intakes often EU-only. Source: https://www.unibo.it/en/study/enrolment-fees-and-other-procedures/degree-programmes/enrolling-in-first-cycle-and-single-cycle-degree-programmes/enrolling-in-a-first-cycle-or-single-cycle-degree-programme-if-you-come-from-a-non-eu-country",
       "applyLinks": [
         {
@@ -4432,13 +4437,13 @@
       "city": "Brescia",
       "website": "https://www.unibs.it/en",
       "admissionPortal": "https://www.unibs.it/en/international/degree-seeking-students/admission/pre-evaluation-masters-degrees",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 35,
       "englishRequirement": "Program-dependent (B2 typical for English LM)",
       "cgpaRequirement": "Pre-evaluation of foreign degree via PICA",
       "requiresCimea": true,
       "status": "soon",
       "estimatedOpenDate": "estimated early 2027 for 2027/28 non-EU pre-evaluation",
-      "deadline": null,
+      "deadline": "2026-05-31",
       "notes": "Intake focus: unclear. Masters pre-evaluation page present; current non-EU round status not confirmed. Source: https://www.unibs.it/en/international/degree-seeking-students/admission/pre-evaluation-masters-degrees",
       "applyLinks": [
         {
@@ -4486,15 +4491,15 @@
       "name": "University of Eastern Piedmont",
       "city": "Vercelli",
       "website": "https://www.uniupo.it/en",
-      "admissionPortal": "https://www.uniupo.it/en/international",
-      "applicationFeeEuro": null,
+      "admissionPortal": "https://www.uniupo.it/en/studentinfo/enrolments/international-students",
+      "applicationFeeEuro": 0,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
       "status": "soon",
       "estimatedOpenDate": "estimated early 2027 for 2027/28",
-      "deadline": null,
-      "notes": "Intake focus: unclear. No verified current non-EU English application window found. Source: https://www.uniupo.it/en/international",
+      "deadline": "estimated early 2027 for 2027/28",
+      "notes": "Intake focus: unclear. Official FAQ: no admission fee for Universitaly pre-registration / qualification assessment. First enrolment instalment €156 later. Verified 2026-09-20.",
       "applyLinks": [
         {
           "label": "UniUPO",
@@ -4536,13 +4541,13 @@
       "city": "Ferrara",
       "website": "https://www.unife.it/en",
       "admissionPortal": "https://apply.unife.it/",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 20,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
       "status": "closed",
       "estimatedOpenDate": "estimated Jan 2027 for 2027/28 English masters",
-      "deadline": null,
+      "deadline": "2026-05-31",
       "notes": "Intake focus: 2026/27. 2026/27 English masters window historically from 12 Jan 2026; no residual non-EU open call verified in Sep 2026. Source: https://apply.unife.it/",
       "applyLinks": [
         {
@@ -4598,7 +4603,7 @@
       "status": "closed",
       "estimatedOpenDate": "estimated Nov 2026 for 2027/28 visa fall session",
       "deadline": "2026-03-20",
-      "notes": "Intake focus: 2026/27. Fall session for visa applicants CLOSED (26 Nov 2025–20 Mar 2026). Spring session for resident students only. Source: https://unige.it/en/international-enrolment",
+      "notes": "Intake focus: 2026/27. Fall session for visa applicants CLOSED (26 Nov 2025-20 Mar 2026). Spring session for resident students only. Source: https://unige.it/en/international-enrolment",
       "applyLinks": [
         {
           "label": "UniGeApply info",
@@ -4760,7 +4765,7 @@
       "requiresCimea": true,
       "status": "soon",
       "estimatedOpenDate": "estimated early 2027 for 2027/28",
-      "deadline": null,
+      "deadline": "estimated early 2027 for 2027/28",
       "notes": "Intake focus: unclear. Enrolment procedures page present; live international call status not confirmed. Source: https://www.uninsubria.eu/services/all-services/enrollment-procedures",
       "applyLinks": [
         {
@@ -5123,13 +5128,13 @@
       "city": "Milan",
       "website": "https://en.unimib.it/",
       "admissionPortal": "https://en.unimib.it/study/information-international-students/access-students-international-qualification",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 30,
       "englishRequirement": "IELTS Required (B2 for English courses; exemptions for native/MOI)",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
       "status": "soon",
       "estimatedOpenDate": "2026-11-01",
-      "deadline": null,
+      "deadline": "2026-05-31",
       "notes": "Intake focus: 2027/28 expected. Starting from November you can apply to our Bachelor’s and Master’s programs with open admission. From January, limited-seat programmes also available. Exact 2027/28 dates not yet listed. Source: https://en.unimib.it/study/information-international-students/access-students-international-qualification",
       "applyLinks": [
         {
@@ -5229,14 +5234,14 @@
       "city": "Modena",
       "website": "https://www.unimore.it/en",
       "admissionPortal": "https://www.unimore.it/en/education/enrolment-and-admission",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 0,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
       "status": "soon",
       "estimatedOpenDate": "estimated early 2027 for 2027/28",
-      "deadline": null,
-      "notes": "Intake focus: unclear. Enrolment and admission page present; current non-EU English window not verified. Source: https://www.unimore.it/en/education/enrolment-and-admission",
+      "deadline": "estimated early 2027 for 2027/28",
+      "notes": "Intake focus: unclear. Universitaly path for visa students; no general app fee. Limited-access programmes may require PagoPA admission fee per call. Verified 2026-09-20.",
       "applyLinks": [
         {
           "label": "Enrolment and admission",
@@ -5790,15 +5795,15 @@
       "name": "University of Parma",
       "city": "Parma",
       "website": "https://www.unipr.it/en",
-      "admissionPortal": "https://www.unipr.it/en",
-      "applicationFeeEuro": null,
+      "admissionPortal": "https://admissions.unipr.it/",
+      "applicationFeeEuro": 30,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
       "status": "closed",
-      "estimatedOpenDate": "estimated early–mid 2027 for 2027/28",
-      "deadline": null,
-      "notes": "Intake focus: 2026/27. Secondary reports place English/master international calls closing Apr 2026; no live 2027/28 open call verified on 2026-09-08. Source: https://www.unipr.it/en",
+      "estimatedOpenDate": "estimated early-mid 2027 for 2027/28",
+      "deadline": "2026-06-26",
+      "notes": "Intake focus: 2026/27. English masters visa applicants: admissions.unipr.it - €30 application fee. Verified 2026-09-20.",
       "applyLinks": [
         {
           "label": "UniPR website",
@@ -5815,32 +5820,32 @@
         {
           "name": "Medicine and Surgery",
           "level": "single-cycle",
-          "applyUrl": "https://mc.unipr.it/en",
+          "applyUrl": "https://admissions.unipr.it/",
           "field": "Medicine",
           "admissionTest": "IMAT"
         },
         {
           "name": "Economics and management of sustainable food environment",
           "level": "master",
-          "applyUrl": "https://corsi.unipr.it/en/cdlm-emsas",
+          "applyUrl": "https://admissions.unipr.it/",
           "field": "Business"
         },
         {
           "name": "Economics and Management of Sustainable Food Systems",
           "level": "master",
-          "applyUrl": "https://corsi.unipr.it/en/cdlm-emsas",
+          "applyUrl": "https://admissions.unipr.it/",
           "field": "Business"
         },
         {
           "name": "Engineering for the food industry",
           "level": "master",
-          "applyUrl": "https://corsi.unipr.it/en/cdlm-iimia",
+          "applyUrl": "https://admissions.unipr.it/",
           "field": "Engineering"
         },
         {
           "name": "Food system: management, sustainability and technologies",
           "level": "master",
-          "applyUrl": "https://corsi.unipr.it/en/cdl-salim",
+          "applyUrl": "https://admissions.unipr.it/",
           "field": "Business"
         }
       ],
@@ -5853,14 +5858,14 @@
       "city": "Pavia",
       "website": "https://en.unipv.it/",
       "admissionPortal": "https://apply.unipv.eu/",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 35,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent; country-specific document requirements on portal",
       "requiresCimea": true,
       "status": "closed",
       "estimatedOpenDate": "estimated Nov 2026 for 2027/28 non-restricted",
       "deadline": "2026-06-11",
-      "notes": "Intake focus: 2026/27. Non-restricted windows for non-EU abroad ended with 4th call 11 Jun 2026 (subject to seats). 5th call 1–8 Sep 2026 for EU/residents in Italy only. Source: https://apply.unipv.eu/en_GB/news/new/72-application-calendar-202627",
+      "notes": "Intake focus: 2026/27. Non-restricted windows for non-EU abroad ended with 4th call 11 Jun 2026 (subject to seats). 5th call 1-8 Sep 2026 for EU/residents in Italy only. Source: https://apply.unipv.eu/en_GB/news/new/72-application-calendar-202627",
       "applyLinks": [
         {
           "label": "Apply UniPV",
@@ -6004,13 +6009,13 @@
       "city": "Trento",
       "website": "https://www.unitn.it/en",
       "admissionPortal": "https://www.unitn.it/en/admission-courses-taught-english",
-      "applicationFeeEuro": null,
+      "applicationFeeEuro": 30,
       "englishRequirement": "Program-dependent (calls specify)",
       "cgpaRequirement": "Program-dependent per call",
       "requiresCimea": true,
       "status": "soon",
-      "estimatedOpenDate": "estimated Dec 2026–Mar 2027",
-      "deadline": null,
+      "estimatedOpenDate": "estimated Dec 2026-Mar 2027",
+      "deadline": "2026-03-04",
       "notes": "Intake focus: 2027/28 expected. Non-EU: submit online application between December and March of each year, complying with programme call deadlines. 2027/28 calls not yet published. Source: https://www.unitn.it/en/admission-courses-taught-english",
       "applyLinks": [
         {
@@ -6251,25 +6256,20 @@
       "name": "University of Trieste",
       "city": "Trieste",
       "website": "https://www.units.it/en",
-      "admissionPortal": "https://www.units.it/en",
-      "applicationFeeEuro": null,
+      "admissionPortal": "https://apply.units.it",
+      "applicationFeeEuro": 40,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
-      "status": "soon",
-      "estimatedOpenDate": "estimated early 2027 for 2027/28",
-      "deadline": null,
-      "notes": "Intake focus: unclear. No verified current non-EU English application window found. Source: https://www.units.it/en",
+      "status": "closed",
+      "estimatedOpenDate": "estimated Dec 2026 for 2027/28",
+      "deadline": "2026-04-30",
+      "notes": "Intake focus: 2026/27. apply.units.it assessment fee €40 (up to 3 programmes). Non-EU rounds closed 30 Apr 2026. Source: https://portale.units.it/en/international/destination-units/degree-seekers",
       "applyLinks": [
         {
-          "label": "UniTS",
-          "url": "https://www.units.it/en",
+          "label": "Apply UniTS",
+          "url": "https://apply.units.it",
           "type": "portal"
-        },
-        {
-          "label": "Computer Engineering course",
-          "url": "https://lauree.units.it/en/0320107303300001/course",
-          "type": "tutorial"
         },
         {
           "label": "Universitaly",
@@ -6319,7 +6319,7 @@
       "status": "closed",
       "estimatedOpenDate": "estimated Nov 2026 for 2027/28 postgraduate",
       "deadline": "2026-04-15",
-      "notes": "Intake focus: 2026/27. Postgraduate 25 Nov 2025–29 Jan 2026; undergraduate 19 Feb–15 Apr 2026. Later calls reserved to Italians/EU/residents. Universitaly non-EU by 15 Jul 2026. Source: https://www.en.unito.it/studying-unito/international-degree-seeking-students/application-international-students",
+      "notes": "Intake focus: 2026/27. Postgraduate 25 Nov 2025-29 Jan 2026; undergraduate 19 Feb-15 Apr 2026. Later calls reserved to Italians/EU/residents. Universitaly non-EU by 15 Jul 2026. Source: https://www.en.unito.it/studying-unito/international-degree-seeking-students/application-international-students",
       "applyLinks": [
         {
           "label": "Apply@UniTo",
@@ -6529,15 +6529,15 @@
       "name": "University of Udine",
       "city": "Udine",
       "website": "https://www.uniud.it/en",
-      "admissionPortal": "https://www.uniud.it/en",
-      "applicationFeeEuro": null,
+      "admissionPortal": "https://www.uniud.it/en/uniud-international/International_Students",
+      "applicationFeeEuro": 20,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
-      "status": "soon",
+      "status": "closed",
       "estimatedOpenDate": "estimated early 2027 for 2027/28",
-      "deadline": null,
-      "notes": "Intake focus: unclear. No verified current non-EU English application window found. Source: https://www.uniud.it/en",
+      "deadline": "2026-06-30",
+      "notes": "Intake focus: 2026/27. Elix-Forms pre-evaluation fee €20 (non-refundable). Universitaly by 30 Jun 2026. Source: UniUD Manifesto aggiuntivo extra-UE 2026/27",
       "applyLinks": [
         {
           "label": "UniUD",
@@ -6578,15 +6578,15 @@
       "name": "University of Verona",
       "city": "Verona",
       "website": "https://www.univr.it/en/",
-      "admissionPortal": "https://univr.esse3.cineca.it/",
-      "applicationFeeEuro": null,
+      "admissionPortal": "https://www.univr.it/en/our-services/international-degree-seeking-students",
+      "applicationFeeEuro": 50,
       "englishRequirement": "Program-dependent",
       "cgpaRequirement": "Program-dependent",
       "requiresCimea": true,
       "status": "closed",
       "estimatedOpenDate": "estimated early 2027 for 2027/28",
       "deadline": "2026-03-31",
-      "notes": "Intake focus: 2026/27. International Master’s pre-admission call for non-Italian citizens not already resident in Italy closed on 31 March 2026. Source: https://www.univr.it/en/our-services/international-degree-seeking-students",
+      "notes": "Intake focus: 2026/27. International masters pre-admission call: €50 (deducted from enrolment fees if you enrol, except scholarship winners). Closed 31 Mar 2026 for 2026/27. Verified 2026-09-20 official bando.",
       "applyLinks": [
         {
           "label": "UniVR ESSE3",
@@ -6701,5 +6701,6 @@
       "priority": 3
     }
   ],
-  "universitalyPreEnrolmentDeadline": "2026-11-30"
+  "universitalyPreEnrolmentDeadline": "2026-11-30",
+  "nextFeeReview": "2026-10-20"
 }

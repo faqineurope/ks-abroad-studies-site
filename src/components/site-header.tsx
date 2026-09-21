@@ -1,10 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { AuthBar } from "@/components/auth-bar";
+import { BrandLogo } from "@/components/brand-logo";
 import { SITE } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -17,7 +18,6 @@ const links = [
   { href: "/guides", label: "Guides" },
   { href: "/scholarships", label: "Scholarships" },
   { href: "/erasmus", label: "Erasmus" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export function SiteHeader() {
@@ -36,14 +36,7 @@ export function SiteHeader() {
     >
       <div className="site-shell flex items-center justify-between gap-4 py-2.5">
         <Link href="/" className="min-w-0 flex items-center gap-3">
-          <Image
-            src={SITE.logoSrc}
-            alt={SITE.name}
-            width={52}
-            height={52}
-            className="rounded-full bg-black shadow-sm"
-            priority
-          />
+          <BrandLogo size={52} priority />
           <div className="min-w-0">
             <div className="display text-lg md:text-xl tracking-tight leading-none">
               {SITE.name}
@@ -79,15 +72,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Link
-            href="/contact"
-            className={cn(
-              "hidden sm:inline-flex btn text-sm",
-              isHome ? "btn-primary" : "btn-sea",
-            )}
-          >
-            Contact Us
-          </Link>
+          <AuthBar isHome={isHome} />
           <button
             type="button"
             className="xl:hidden p-2"
@@ -119,11 +104,25 @@ export function SiteHeader() {
             </Link>
           ))}
           <Link
-            href="/contact"
+            href="/login"
             className="rounded-xl px-3 py-2.5 font-semibold"
             onClick={() => setOpen(false)}
           >
-            Contact Us
+            Login
+          </Link>
+          <Link
+            href="/register"
+            className="rounded-xl px-3 py-2.5 font-semibold"
+            onClick={() => setOpen(false)}
+          >
+            Register
+          </Link>
+          <Link
+            href="/portal"
+            className="rounded-xl px-3 py-2.5 font-semibold"
+            onClick={() => setOpen(false)}
+          >
+            Portal
           </Link>
         </div>
       )}

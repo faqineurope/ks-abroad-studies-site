@@ -28,7 +28,8 @@ export function ContactForm() {
           phone: String(data.get("phone") || "").trim(),
           purpose: String(data.get("purpose") || "").trim(),
           message: String(data.get("message") || "").trim(),
-          website: String(data.get("website") || ""), // honeypot
+          website: String(data.get("website") || ""),
+          contactConsent: data.get("contactConsent") === "on",
         }),
       });
       const json = (await res.json().catch(() => ({}))) as {
@@ -103,6 +104,18 @@ export function ContactForm() {
         maxLength={2000}
         placeholder="CGPA, English proof, bachelor/master/medicine, city preference"
       />
+
+      <label className="flex items-start gap-2 text-sm text-[var(--ink-soft)]">
+        <input name="contactConsent" type="checkbox" required className="mt-1" />
+        <span>
+          I consent to KS Abroad Studies using my contact details to reply to this
+          inquiry, as described in the{" "}
+          <a href="/privacy" className="font-semibold text-[var(--sea-deep)] hover:underline">
+            Privacy Policy
+          </a>
+          .
+        </span>
+      </label>
 
       <button
         type="submit"

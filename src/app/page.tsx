@@ -1,7 +1,4 @@
-export const dynamic = "force-dynamic";
-
-import Image from "next/image";
-import Link from "next/link";
+﻿import Link from "next/link";
 import {
   ArrowUpRight,
   BookOpen,
@@ -11,12 +8,37 @@ import {
   BookMarked,
   ScrollText,
 } from "lucide-react";
+import { BrandLogo } from "@/components/brand-logo";
+import { JsonLd } from "@/components/json-ld";
 import { SocialLinks } from "@/components/social-links";
 import { getMeta } from "@/lib/data";
 import { SITE } from "@/lib/site";
+import { faqJsonLd } from "@/lib/structured-data";
+import { PUBLIC_REVALIDATE_SECONDS } from "@/lib/cache";
+
+export const revalidate = PUBLIC_REVALIDATE_SECONDS;
 
 export default async function HomePage() {
   const [meta] = await Promise.all([getMeta()]);
+  const faq = faqJsonLd([
+    {
+      question: "When is Universitaly pre-enrolment for non-EU students?",
+      answer: `Universitaly pre-enrolment deadline on this site is ${meta.universitalyPreEnrolmentDeadline}. Always confirm embassy and university steps.`,
+    },
+    {
+      question: "Does KS Abroad Studies help Pakistani students apply to Italy?",
+      answer: `${SITE.name} is a Pakistan-based consultancy for Italian public universities: English programmes, portals, regional scholarships, DOV, and study visa guidance.`,
+    },
+    {
+      question: "Where can I browse English master's and bachelor's programmes?",
+      answer:
+        "Use /programs/master for master's, /programs/bachelor for bachelor's (including CEnT-S), and /programs/single-cycle for medicine and related single-cycle degrees.",
+    },
+    {
+      question: "How do I contact KS Abroad?",
+      answer: `WhatsApp ${SITE.whatsappDisplay}, email ${SITE.email}, or the contact form at /contact. On-site KS Buddy can answer common questions.`,
+    },
+  ]);
 
   const paths = [
     {
@@ -40,36 +62,30 @@ export default async function HomePage() {
     {
       href: "/programs/single-cycle",
       title: "Single-cycle (Medicine)",
-      body: "MBBS · Dentistry · Veterinary + IMAT",
+      body: "MBBS Â· Dentistry Â· Veterinary + IMAT",
       icon: Stethoscope,
     },
     {
       href: "/phd",
       title: "PhD",
-      body: "Dottorato · PICA · English courses",
+      body: "Dottorato Â· PICA Â· English courses",
       icon: BookMarked,
     },
     {
       href: "/guides",
       title: "Guides",
-      body: "Docs · DOV · visa · scholarships",
+      body: "Docs Â· DOV Â· visa Â· scholarships",
       icon: ScrollText,
     },
   ];
 
   return (
     <>
+      <JsonLd data={faq} />
       <section className="hero-plane">
         <div className="site-shell relative z-10 flex min-h-[min(88vh,760px)] flex-col justify-end pb-14 pt-24">
           <div className="rise flex items-center gap-4">
-            <Image
-              src={SITE.logoSrc}
-              alt={SITE.name}
-              width={84}
-              height={84}
-              className="rounded-full bg-black shadow-lg ring-2 ring-white/15"
-              priority
-            />
+            <BrandLogo size={84} priority className="shadow-lg ring-2 ring-white/15" />
             <p className="eyebrow text-[#d9c4a1]">Pakistan · Study Abroad Consultancy</p>
           </div>
           <h1 className="display mt-5 max-w-4xl text-[clamp(3rem,8.5vw,6.4rem)] rise rise-delay-1">
@@ -115,12 +131,12 @@ export default async function HomePage() {
             {
               label: "Universities",
               value: `${meta.universityCount}+`,
-              detail: `${meta.openCount} open · ${meta.soonCount} soon · ${meta.closedCount} closed`,
+              detail: `${meta.openCount} open Â· ${meta.soonCount} soon Â· ${meta.closedCount} closed`,
             },
             {
               label: "English programs",
               value: `${meta.programCount}+`,
-              detail: `${meta.bachelorCount} bachelor · ${meta.masterCount} master · ${meta.singleCycleCount} single-cycle`,
+              detail: `${meta.bachelorCount} bachelor Â· ${meta.masterCount} master Â· ${meta.singleCycleCount} single-cycle`,
             },
             {
               label: "Universitaly",
@@ -148,7 +164,7 @@ export default async function HomePage() {
             </h2>
             <p className="mt-5 max-w-2xl text-[var(--ink-soft)] text-lg leading-relaxed">
               Official university links, region scholarships, and process steps
-              in one place — built for Pakistani students targeting Italy.
+              in one place â€” built for Pakistani students targeting Italy.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link href="/contact" className="btn btn-sea">
@@ -164,7 +180,7 @@ export default async function HomePage() {
               </a>
             </div>
             <div className="mt-7">
-              <p className="eyebrow mb-3">Follow · {SITE.founderHandle}</p>
+              <p className="eyebrow mb-3">Follow Â· {SITE.founderHandle}</p>
               <SocialLinks compact groups={["company", "channels"]} />
             </div>
           </div>
@@ -181,7 +197,7 @@ export default async function HomePage() {
               Bachelor&apos;s + CEnT-S <ArrowUpRight size={18} />
             </Link>
             <Link href="/programs/single-cycle" className="link-row">
-              Medicine · Dentistry · IMAT <ArrowUpRight size={18} />
+              Medicine Â· Dentistry Â· IMAT <ArrowUpRight size={18} />
             </Link>
             <Link href="/phd" className="link-row">
               PhD / Dottorato <ArrowUpRight size={18} />
@@ -196,7 +212,7 @@ export default async function HomePage() {
               Erasmus Mundus 2027 <ArrowUpRight size={18} />
             </Link>
             <Link href="/process" className="link-row">
-              Full process · tests <ArrowUpRight size={18} />
+              Full process Â· tests <ArrowUpRight size={18} />
             </Link>
             <Link href="/about" className="link-row">
               Company registration <ArrowUpRight size={18} />

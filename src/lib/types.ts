@@ -45,6 +45,8 @@ export interface UniversitiesDataset {
   intake: string;
   lastUpdated: string;
   sourceNote: string;
+  /** ISO date — next scheduled application-fee re-verification */
+  nextFeeReview?: string;
   /** ISO date — MUR / Universitaly pre-enrolment deadline for non-EU students */
   universitalyPreEnrolmentDeadline?: string;
   universities: University[];

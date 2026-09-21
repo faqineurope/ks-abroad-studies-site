@@ -1,16 +1,21 @@
-export const dynamic = "force-dynamic";
-
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ExternalLink } from "lucide-react";
+import { JsonLd } from "@/components/json-ld";
 import { StatusBadge } from "@/components/status-badge";
+import { PUBLIC_REVALIDATE_SECONDS } from "@/lib/cache";
 import {
   getScholarshipRegion,
   getScholarshipRegions,
 } from "@/lib/scholarships";
+import {
+  breadcrumbJsonLd,
+  scholarshipJsonLd,
+} from "@/lib/structured-data";
 import type { AdmissionStatus } from "@/lib/types";
 
+export const revalidate = PUBLIC_REVALIDATE_SECONDS;
 type Props = { params: Promise<{ id: string }> };
 
 function asAdmissionStatus(status: string): AdmissionStatus {
@@ -30,6 +35,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${region.region} regional scholarship`,
     description: `${region.agencyName}: portal, deadlines, documents, and benefits for students in ${region.region}.`,
+    alternates: { canonical: `/scholarships/${region.id}` },
+    openGraph: {
+      title: `${region.region} regional scholarship`,
+      description: `${region.agencyName} â€” DSU / right-to-study for ${region.region}.`,
+      url: `/scholarships/${region.id}`,
+    },
   };
 }
 
@@ -40,11 +51,21 @@ export default async function ScholarshipRegionPage({ params }: Props) {
 
   return (
     <div className="site-shell py-12 md:py-16">
+      <JsonLd
+        data={[
+          scholarshipJsonLd(region),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Scholarships", path: "/scholarships" },
+            { name: region.region, path: `/scholarships/${region.id}` },
+          ]),
+        ]}
+      />
       <Link
         href="/scholarships"
         className="text-sm font-semibold text-[var(--sea-deep)] hover:underline"
       >
-        ← All regional scholarships
+        â† All regional scholarships
       </Link>
 
       <div className="mt-5 flex flex-wrap items-start justify-between gap-4">
@@ -168,7 +189,7 @@ export default async function ScholarshipRegionPage({ params }: Props) {
           <h2 className="display text-3xl">Typical benefits</h2>
           <ul className="mt-4 space-y-2 text-[var(--ink-soft)]">
             {region.typicalBenefits.map((item) => (
-              <li key={item}>• {item}</li>
+              <li key={item}>â€¢ {item}</li>
             ))}
           </ul>
         </div>
@@ -176,7 +197,7 @@ export default async function ScholarshipRegionPage({ params }: Props) {
           <h2 className="display text-3xl">Documents usually needed</h2>
           <ul className="mt-4 space-y-2 text-[var(--ink-soft)]">
             {region.typicalDocuments.map((item) => (
-              <li key={item}>• {item}</li>
+              <li key={item}>â€¢ {item}</li>
             ))}
           </ul>
         </div>

@@ -1,12 +1,13 @@
-export const dynamic = "force-dynamic";
-
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { PhdExplorer } from "@/components/phd-explorer";
 import { getPhdDataset, getPhdUniversities } from "@/lib/phd";
+import { PUBLIC_REVALIDATE_SECONDS } from "@/lib/cache";
+
+export const revalidate = PUBLIC_REVALIDATE_SECONDS;
 
 export const metadata: Metadata = {
-  title: "PhD in Italy — procedure & universities",
+  title: "PhD in Italy â€” procedure & universities",
   description:
     "A to Z Italian Dottorato (PhD) guide: PICA portal, requirements, scholarships, English-friendly programmes across 50+ universities for cycle XLII 2026/2027.",
 };
@@ -21,15 +22,15 @@ export default async function PhdPage() {
   return (
     <div className="site-shell page-hero pb-16">
       <p className="eyebrow">
-        Cycle {data.cycle} · A.Y. {data.academicYear}
+        Cycle {data.cycle} Â· A.Y. {data.academicYear}
       </p>
       <h1 className="display mt-3 text-4xl md:text-6xl max-w-4xl">{g.headline}</h1>
       <p className="mt-5 max-w-3xl text-lg text-[var(--ink-soft)] leading-relaxed">
         {g.intro}
       </p>
       <p className="mt-3 text-sm font-semibold text-[var(--sea-deep)]">
-        {data.universityCount} universities curated · {data.programmeCount} English-friendly
-        PhD courses listed · Updated {data.lastUpdated}
+        {data.universityCount} universities curated Â· {data.programmeCount} English-friendly
+        PhD courses listed Â· Updated {data.lastUpdated}
       </p>
 
       <div className="mt-8 flex flex-wrap gap-3">
@@ -37,7 +38,7 @@ export default async function PhdPage() {
           Open PICA login
         </a>
         <a href="#procedure" className="btn btn-outline">
-          A–Z procedure
+          Aâ€“Z procedure
         </a>
         <a href="#universities" className="btn btn-outline">
           University list
@@ -63,7 +64,7 @@ export default async function PhdPage() {
           <h2 className="display text-3xl">Documents checklist</h2>
           <ul className="mt-5 space-y-2 text-sm text-[var(--ink-soft)]">
             {g.documentsChecklist.map((d) => (
-              <li key={d}>· {d}</li>
+              <li key={d}>Â· {d}</li>
             ))}
           </ul>
         </section>
@@ -74,7 +75,7 @@ export default async function PhdPage() {
             <a href={g.picaLogin} className="font-semibold text-[var(--sea-deep)] hover:underline" target="_blank" rel="noreferrer">
               pica.cineca.it
             </a>
-            . Each university still opens its own competition URL on that platform — or uses Esse3 / its own system instead.
+            . Each university still opens its own competition URL on that platform â€” or uses Esse3 / its own system instead.
           </p>
           <ol className="mt-4 space-y-2 text-sm text-[var(--ink-soft)]">
             {g.picaSteps.map((s, i) => (
@@ -94,13 +95,13 @@ export default async function PhdPage() {
         <p className="text-[var(--ink-soft)] leading-relaxed">{g.universitalyNote}</p>
         <div className="flex flex-wrap gap-3 pt-2">
           <Link href="/guides/visa" className="font-bold text-[var(--sea-deep)] hover:underline">
-            Study visa guides →
+            Study visa guides â†’
           </Link>
           <Link href="/guides/motivation-letter" className="font-bold text-[var(--sea-deep)] hover:underline">
-            Motivation / proposal tips →
+            Motivation / proposal tips â†’
           </Link>
           <Link href="/erasmus" className="font-bold text-[var(--sea-deep)] hover:underline">
-            Erasmus Mundus (masters) →
+            Erasmus Mundus (masters) â†’
           </Link>
         </div>
       </section>

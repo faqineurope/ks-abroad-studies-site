@@ -1,11 +1,17 @@
-export const dynamic = "force-dynamic";
-
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ExternalLink } from "lucide-react";
+import { JsonLd } from "@/components/json-ld";
+import { PUBLIC_REVALIDATE_SECONDS } from "@/lib/cache";
 import { getPhdUniversities, getPhdUniversity } from "@/lib/phd";
+import {
+  breadcrumbJsonLd,
+  phdUniversityJsonLd,
+} from "@/lib/structured-data";
 import { regionLabel } from "@/lib/utils";
+
+export const revalidate = PUBLIC_REVALIDATE_SECONDS;
 
 type Props = { params: Promise<{ id: string }> };
 
@@ -21,6 +27,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${uni.name} PhD`,
     description: `PhD / Dottorato admissions at ${uni.name}: portal, requirements, English-friendly programmes.`,
+    alternates: { canonical: `/phd/${uni.id}` },
+    openGraph: {
+      title: `${uni.name} PhD`,
+      description: `PhD / Dottorato at ${uni.name}`,
+      url: `/phd/${uni.id}`,
+    },
   };
 }
 
@@ -46,15 +58,25 @@ export default async function PhdUniversityPage({ params }: Props) {
 
   return (
     <div className="site-shell py-12 md:py-16">
+      <JsonLd
+        data={[
+          phdUniversityJsonLd(uni),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "PhD", path: "/phd" },
+            { name: uni.name, path: `/phd/${uni.id}` },
+          ]),
+        ]}
+      />
       <Link href="/phd" className="text-sm font-semibold text-[var(--sea-deep)] hover:underline">
-        ← All PhD universities
+        â† All PhD universities
       </Link>
 
       <div className="mt-5 flex flex-wrap items-start justify-between gap-4">
         <div>
           <p className="eyebrow">
             {uni.city}
-            {uni.region ? ` · ${regionLabel(uni.region)}` : ""} · {uni.cycleNote}
+            {uni.region ? ` Â· ${regionLabel(uni.region)}` : ""} Â· {uni.cycleNote}
           </p>
           <h1 className="display mt-2 text-4xl md:text-6xl max-w-3xl">{uni.name}</h1>
         </div>
@@ -138,7 +160,7 @@ export default async function PhdUniversityPage({ params }: Props) {
           <h2 className="display text-3xl">Typical requirements</h2>
           <ul className="mt-5 space-y-2 text-sm text-[var(--ink-soft)]">
             {uni.requirements.map((r) => (
-              <li key={r.slice(0, 60)}>· {r}</li>
+              <li key={r.slice(0, 60)}>Â· {r}</li>
             ))}
           </ul>
         </section>
@@ -150,7 +172,7 @@ export default async function PhdUniversityPage({ params }: Props) {
         </h2>
         <p className="mt-3 text-sm text-[var(--ink-soft)] max-w-3xl">
           Verified from official pages where language or international delivery is clear.
-          Empty list does not mean no PhD exists — only that a clear English sheet was not
+          Empty list does not mean no PhD exists â€” only that a clear English sheet was not
           confirmed in this curation.
         </p>
         {uni.programmes.length === 0 ? (

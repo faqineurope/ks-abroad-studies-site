@@ -160,8 +160,10 @@ export function UniversityExplorer({ universities }: { universities: University[
               </div>
               <div>
                 <div className="eyebrow">Deadline</div>
-                <div className="font-semibold mt-1">
-                  {formatAdmissionDate(uni.deadline)}
+                <div className="font-semibold mt-1" suppressHydrationWarning>
+                  {formatAdmissionDate(uni.deadline ?? uni.estimatedOpenDate, {
+                    status: uni.status,
+                  })}
                 </div>
               </div>
             </div>
@@ -233,14 +235,14 @@ export function UniversityExplorer({ universities }: { universities: University[
                   {formatFee(uni.applicationFeeEuro)}
                 </td>
                 <td className="text-sm max-w-[180px]">{uni.englishRequirement}</td>
-                <td className="text-sm">
+                <td className="text-sm" suppressHydrationWarning>
                   <div>
                     {formatAdmissionDate(uni.estimatedOpenDate, {
                       status: uni.status,
                     })}
                   </div>
                   <div className="text-[var(--ink-soft)] mt-1">
-                    Deadline: {formatAdmissionDate(uni.deadline)}
+                    {["Deadline:", formatAdmissionDate(uni.deadline ?? uni.estimatedOpenDate, { status: uni.status })].join(" ")}
                   </div>
                 </td>
                 <td>

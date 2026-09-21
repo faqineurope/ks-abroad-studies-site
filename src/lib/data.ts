@@ -1,5 +1,6 @@
 import { promises as fs } from "fs";
 import path from "path";
+import { bustCacheTag, cachedJsonReader, CACHE_TAGS } from "@/lib/cache";
 import type {
   Program,
   ProgramLevel,
@@ -9,13 +10,24 @@ import type {
 
 const DATA_PATH = path.join(process.cwd(), "src/data/universities.json");
 
-export async function getDataset(): Promise<UniversitiesDataset> {
+async function readDatasetFromDisk(): Promise<UniversitiesDataset> {
   const raw = await fs.readFile(DATA_PATH, "utf8");
   return JSON.parse(raw) as UniversitiesDataset;
 }
 
+/** Cached catalogue read — safe for high-traffic public pages. */
+export async function getDataset(): Promise<UniversitiesDataset> {
+  return cachedJsonReader(CACHE_TAGS.universities, "universities-dataset", readDatasetFromDisk);
+}
+
+/** Uncached read for admin mutations. */
+export async function getDatasetFresh(): Promise<UniversitiesDataset> {
+  return readDatasetFromDisk();
+}
+
 export async function saveDataset(dataset: UniversitiesDataset): Promise<void> {
   await fs.writeFile(DATA_PATH, JSON.stringify(dataset, null, 2) + "\n", "utf8");
+  bustCacheTag(CACHE_TAGS.universities);
 }
 
 export async function getUniversities(): Promise<University[]> {
@@ -69,6 +81,7 @@ export async function getMeta() {
     intake: dataset.intake,
     lastUpdated: dataset.lastUpdated,
     sourceNote: dataset.sourceNote,
+    nextFeeReview: dataset.nextFeeReview ?? null,
     universitalyPreEnrolmentDeadline:
       dataset.universitalyPreEnrolmentDeadline ?? "2026-11-30",
     universityCount: dataset.universities.length,

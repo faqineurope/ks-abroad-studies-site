@@ -1,9 +1,10 @@
-export const dynamic = "force-dynamic";
-
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { getPakistanGuides } from "@/lib/guides";
 import { getScholarshipRegions, getScholarshipsDataset } from "@/lib/scholarships";
+import { PUBLIC_REVALIDATE_SECONDS } from "@/lib/cache";
+
+export const revalidate = PUBLIC_REVALIDATE_SECONDS;
 
 export const metadata: Metadata = {
   title: "Scholarship documents by region",
@@ -21,11 +22,11 @@ export default async function ScholarshipDocsPage() {
   return (
     <div className="site-shell page-hero pb-16">
       <Link href="/guides" className="text-sm font-semibold text-[var(--sea-deep)] hover:underline">
-        ← All guides
+        â† All guides
       </Link>
-      <p className="eyebrow mt-6">DSU · region by region</p>
+      <p className="eyebrow mt-6">DSU Â· region by region</p>
       <h1 className="display mt-2 text-4xl md:text-6xl max-w-4xl">
-        Scholarship documents — every region listed separately
+        Scholarship documents â€” every region listed separately
       </h1>
       <p className="mt-5 max-w-3xl text-lg text-[var(--ink-soft)] leading-relaxed">
         Each Italian region runs its own right-to-study (DSU) agency. Match your
@@ -44,7 +45,7 @@ export default async function ScholarshipDocsPage() {
           </a>
         ))}
         <a href="#pakistan-lazio" className="rounded-full border border-[var(--line)] px-3 py-1.5 hover:bg-white/60">
-          Pakistan · Lazio steps
+          Pakistan Â· Lazio steps
         </a>
       </nav>
 
@@ -53,7 +54,7 @@ export default async function ScholarshipDocsPage() {
         <ul className="mt-4 space-y-2 text-sm text-[var(--ink-soft)]">
           {dataset.generalGuide.nationalNotes.map((n) => (
             <li key={n.slice(0, 56)} className="leading-relaxed">
-              · {n}
+              Â· {n}
             </li>
           ))}
         </ul>
@@ -92,7 +93,7 @@ export default async function ScholarshipDocsPage() {
             <ul className="mt-3 grid gap-2 md:grid-cols-2">
               {r.typicalDocuments.map((doc) => (
                 <li key={doc} className="text-sm text-[var(--ink-soft)]">
-                  · {doc}
+                  Â· {doc}
                 </li>
               ))}
             </ul>
@@ -103,9 +104,9 @@ export default async function ScholarshipDocsPage() {
                 <ul className="mt-3 space-y-2 text-sm text-[var(--ink-soft)]">
                   {r.agencies.map((a) => (
                     <li key={a.name}>
-                      · {a.name}
+                      Â· {a.name}
                       {a.cities?.length ? ` (${a.cities.join(", ")})` : ""}
-                      {a.deadlineNote ? ` — ${a.deadlineNote}` : ""}{" "}
+                      {a.deadlineNote ? ` â€” ${a.deadlineNote}` : ""}{" "}
                       {a.portalUrl && (
                         <a
                           href={a.portalUrl}
@@ -113,7 +114,7 @@ export default async function ScholarshipDocsPage() {
                           rel="noreferrer"
                           className="font-semibold text-[var(--sea-deep)] hover:underline"
                         >
-                          portal →
+                          portal â†’
                         </a>
                       )}
                     </li>
@@ -130,7 +131,7 @@ export default async function ScholarshipDocsPage() {
                   rel="noreferrer"
                   className="text-[var(--sea-deep)] hover:underline"
                 >
-                  Region portal →
+                  Region portal â†’
                 </a>
               )}
               {r.applyUrl && r.applyUrl !== r.portalUrl ? (
@@ -140,14 +141,14 @@ export default async function ScholarshipDocsPage() {
                   rel="noreferrer"
                   className="text-[var(--sea-deep)] hover:underline"
                 >
-                  Apply / bando →
+                  Apply / bando â†’
                 </a>
               ) : null}
               <Link
                 href={`/scholarships/${r.id}`}
                 className="text-[var(--sea-deep)] hover:underline"
               >
-                Full scholarship page →
+                Full scholarship page â†’
               </Link>
             </div>
           </section>
@@ -155,7 +156,7 @@ export default async function ScholarshipDocsPage() {
       </div>
 
       <section id="pakistan-lazio" className="mt-12 scroll-mt-24">
-        <p className="eyebrow">Pakistan desk · Lazio focus</p>
+        <p className="eyebrow">Pakistan desk Â· Lazio focus</p>
         <h2 className="display mt-2 text-3xl md:text-5xl max-w-4xl">{pk.title}</h2>
         <p className="mt-5 max-w-3xl text-lg text-[var(--ink-soft)] leading-relaxed">
           {pk.intro}
@@ -176,7 +177,7 @@ export default async function ScholarshipDocsPage() {
             <h3 className="display text-2xl">Prepare in Pakistan</h3>
             <ul className="mt-4 space-y-2 text-sm text-[var(--ink-soft)]">
               {pk.documentsBeforeTravel.map((d) => (
-                <li key={d}>· {d}</li>
+                <li key={d}>Â· {d}</li>
               ))}
             </ul>
           </div>
@@ -184,7 +185,7 @@ export default async function ScholarshipDocsPage() {
             <h3 className="display text-2xl">Legalise in Italy</h3>
             <ul className="mt-4 space-y-2 text-sm text-[var(--ink-soft)]">
               {pk.italyLegalisation.map((d) => (
-                <li key={d.slice(0, 48)}>· {d}</li>
+                <li key={d.slice(0, 48)}>Â· {d}</li>
               ))}
             </ul>
           </div>
@@ -192,7 +193,7 @@ export default async function ScholarshipDocsPage() {
 
         <ul className="mt-6 space-y-2 text-sm text-[var(--ink-soft)]">
           {pk.moneyNotes.map((n) => (
-            <li key={n.slice(0, 40)}>· {n}</li>
+            <li key={n.slice(0, 40)}>Â· {n}</li>
           ))}
         </ul>
       </section>

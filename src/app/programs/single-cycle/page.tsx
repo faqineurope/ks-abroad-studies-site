@@ -1,15 +1,16 @@
-export const dynamic = "force-dynamic";
-
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ProgramExplorer } from "@/components/program-explorer";
 import { getMeta, getPrograms } from "@/lib/data";
 import { getImatInfo } from "@/lib/imat";
+import { PUBLIC_REVALIDATE_SECONDS } from "@/lib/cache";
+
+export const revalidate = PUBLIC_REVALIDATE_SECONDS;
 
 export const metadata: Metadata = {
   title: "Medicine & Single-cycle Degrees in English",
   description:
-    "English-taught single-cycle degrees in Italy: Medicine, Dentistry, Veterinary, Pharmacy — with full IMAT and Universitaly guidance.",
+    "English-taught single-cycle degrees in Italy: Medicine, Dentistry, Veterinary, Pharmacy â€” with full IMAT and Universitaly guidance.",
 };
 
 export default async function SingleCycleProgramsPage() {
@@ -25,18 +26,18 @@ export default async function SingleCycleProgramsPage() {
   return (
     <div className="site-shell page-hero pb-12 md:pb-16">
       <Link href="/" className="text-sm font-semibold text-[var(--sea-deep)] hover:underline">
-        ← Home
+        â† Home
       </Link>
       <p className="eyebrow mt-6">Intake {meta.intake}</p>
       <h1 className="display mt-3 text-4xl md:text-6xl max-w-4xl">
-        Single-cycle (Medicine) — MBBS, Dentistry & more
+        Single-cycle (Medicine) â€” MBBS, Dentistry & more
       </h1>
       <p className="mt-5 max-w-3xl text-lg text-[var(--ink-soft)] leading-relaxed">
-        {meta.singleCycleCount} English single-cycle programmes (typically 5–6
+        {meta.singleCycleCount} English single-cycle programmes (typically 5â€“6
         years): Medicine and Surgery (MBBS-equivalent), Dentistry, Veterinary
         Medicine, and selected Pharmacy tracks. Most Medicine / Dentistry /
         Veterinary English seats use the national <strong>IMAT</strong> test via
-        Universitaly — full guide below. Pharmacy English usually uses{" "}
+        Universitaly â€” full guide below. Pharmacy English usually uses{" "}
         <strong>CEnT-S</strong>, not IMAT.
       </p>
 
@@ -75,7 +76,7 @@ export default async function SingleCycleProgramsPage() {
             <ul className="space-y-2 text-[var(--ink-soft)]">
               {sections.map((item) => (
                 <li key={item} className="leading-relaxed">
-                  · {item}
+                  Â· {item}
                 </li>
               ))}
             </ul>
@@ -86,7 +87,7 @@ export default async function SingleCycleProgramsPage() {
         <ul className="space-y-2 text-[var(--ink-soft)]">
           {documents.map((doc) => (
             <li key={doc} className="leading-relaxed">
-              · {doc}
+              Â· {doc}
             </li>
           ))}
         </ul>
@@ -97,7 +98,7 @@ export default async function SingleCycleProgramsPage() {
             <ul className="space-y-2 text-[var(--ink-soft)]">
               {notes.map((note) => (
                 <li key={note} className="leading-relaxed">
-                  · {note}
+                  Â· {note}
                 </li>
               ))}
             </ul>
@@ -111,10 +112,10 @@ export default async function SingleCycleProgramsPage() {
             rel="noreferrer"
             className="font-bold text-[var(--sea-deep)] hover:underline"
           >
-            Open Universitaly / IMAT →
+            Open Universitaly / IMAT â†’
           </a>
           <Link href="/process#imat" className="font-bold text-[var(--sea-deep)] hover:underline">
-            Process page IMAT section →
+            Process page IMAT section â†’
           </Link>
         </div>
       </section>
