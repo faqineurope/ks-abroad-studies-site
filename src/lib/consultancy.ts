@@ -5,6 +5,7 @@ import type {
   ConsultancyStatus,
   ConsultancyType,
 } from "@/lib/consultancy-types";
+import { runtimeDataDir } from "@/lib/runtime-data-dir";
 
 export type {
   ConsultancyCase,
@@ -13,7 +14,7 @@ export type {
   ConsultancyType,
 } from "@/lib/consultancy-types";
 
-const DATA_DIR = path.join(process.cwd(), "data");
+const DATA_DIR = runtimeDataDir();
 const DATA_PATH = path.join(DATA_DIR, "consultancy-cases.json");
 
 async function ensureStore() {

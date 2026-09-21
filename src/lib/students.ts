@@ -1,8 +1,9 @@
 import { promises as fs } from "fs";
 import path from "path";
+import { runtimeDataDir } from "@/lib/runtime-data-dir";
 import { EMPTY_PROFILE, type PublicStudent, type StudentRecord } from "@/lib/student-types";
 
-const DATA_DIR = path.join(process.cwd(), "data");
+const DATA_DIR = runtimeDataDir();
 const DATA_PATH = path.join(DATA_DIR, "students.json");
 export const UPLOAD_DIR = path.join(DATA_DIR, "uploads");
 

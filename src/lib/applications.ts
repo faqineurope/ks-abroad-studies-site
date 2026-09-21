@@ -10,6 +10,7 @@ import {
 } from "@/lib/application-types";
 import { getCasesForStudent } from "@/lib/consultancy";
 import { getUniversities } from "@/lib/data";
+import { runtimeDataDir } from "@/lib/runtime-data-dir";
 import {
   DOCUMENT_KINDS,
   type DocumentKind,
@@ -26,7 +27,7 @@ export type {
 } from "@/lib/application-types";
 export { APPLICATION_STATUSES, applicationStatusLabel };
 
-const DATA_DIR = path.join(process.cwd(), "data");
+const DATA_DIR = runtimeDataDir();
 const DATA_PATH = path.join(DATA_DIR, "applications.json");
 
 async function ensureStore() {

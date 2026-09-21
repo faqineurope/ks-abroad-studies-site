@@ -78,6 +78,8 @@ export function trustedHosts(): Set<string> {
   } catch {
     /* ignore */
   }
+  const vercel = process.env.VERCEL_URL?.trim().replace(/^https?:\/\//, "").replace(/\/$/, "");
+  if (vercel) hosts.add(vercel);
   const extra = process.env.TRUSTED_ORIGINS?.split(",") ?? [];
   for (const raw of extra) {
     const v = raw.trim();

@@ -85,43 +85,51 @@ export async function POST(req: NextRequest) {
     acceptedUserAgent: clean(req.headers.get("user-agent"), 240) || undefined,
   };
 
-  const student = await upsertStudent({
-    id: crypto.randomUUID(),
-    email,
-    passwordHash: await hashPassword(password),
-    name,
-    phone,
-    createdAt: now,
-    profile: { ...EMPTY_PROFILE },
-    documents: [],
-    consent,
-  });
+  try {
+    const student = await upsertStudent({
+      id: crypto.randomUUID(),
+      email,
+      passwordHash: await hashPassword(password),
+      name,
+      phone,
+      createdAt: now,
+      profile: { ...EMPTY_PROFILE },
+      documents: [],
+      consent,
+    });
 
-  await sendEmail({
-    to: email,
-    subject: `Welcome to ${SITE.name}`,
-    text: [
-      `Assalam o alaikum ${name},`,
-      "",
-      `Your ${SITE.name} portal account is ready.`,
-      "Log in at /portal to save your profile, upload documents, and get your Top 10 programme shortlist.",
-      "",
-      `Privacy Policy version: ${CONSENT_POLICY_VERSION}`,
-      "You can export or delete your data from the portal Privacy controls, or email us.",
-      "",
-      `WhatsApp: ${SITE.whatsappDisplay}`,
-      `Email: ${SITE.email}`,
-      "",
-      "— KS Abroad Studies team",
-    ].join("\n"),
-  });
+    await sendEmail({
+      to: email,
+      subject: `Welcome to ${SITE.name}`,
+      text: [
+        `Assalam o alaikum ${name},`,
+        "",
+        `Your ${SITE.name} portal account is ready.`,
+        "Log in at /portal to save your profile, upload documents, and get your Top 10 programme shortlist.",
+        "",
+        `Privacy Policy version: ${CONSENT_POLICY_VERSION}`,
+        "You can export or delete your data from the portal Privacy controls, or email us.",
+        "",
+        `WhatsApp: ${SITE.whatsappDisplay}`,
+        `Email: ${SITE.email}`,
+        "",
+        "— KS Abroad Studies team",
+      ].join("\n"),
+    });
 
-  const token = issueJwt(student.id);
-  const res = NextResponse.json({
-    ok: true,
-    student: toPublic(student),
-    ...(token ? { token } : {}),
-  });
-  setSessionCookie(res, student.id);
-  return res;
+    const token = issueJwt(student.id);
+    const res = NextResponse.json({
+      ok: true,
+      student: toPublic(student),
+      ...(token ? { token } : {}),
+    });
+    setSessionCookie(res, student.id);
+    return res;
+  } catch (err) {
+    console.error("[register]", err);
+    return NextResponse.json(
+      { error: "Could not create your account. Please try again in a moment." },
+      { status: 500 },
+    );
+  }
 }
