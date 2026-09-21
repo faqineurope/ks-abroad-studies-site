@@ -1,25 +1,17 @@
 import { promises as fs } from "fs";
 import path from "path";
+import type {
+  ConsultancyCase,
+  ConsultancyStatus,
+  ConsultancyType,
+} from "@/lib/consultancy-types";
 
-export type ConsultancyType = "one-to-one" | "private-case";
-export type ConsultancyStatus = "open" | "in_progress" | "closed";
-
-export type ConsultancyReply = {
-  at: string;
-  from: "student" | "staff";
-  body: string;
-};
-
-export type ConsultancyCase = {
-  id: string;
-  studentId: string;
-  type: ConsultancyType;
-  topic: string;
-  message: string;
-  status: ConsultancyStatus;
-  createdAt: string;
-  replies: ConsultancyReply[];
-};
+export type {
+  ConsultancyCase,
+  ConsultancyReply,
+  ConsultancyStatus,
+  ConsultancyType,
+} from "@/lib/consultancy-types";
 
 const DATA_DIR = path.join(process.cwd(), "data");
 const DATA_PATH = path.join(DATA_DIR, "consultancy-cases.json");

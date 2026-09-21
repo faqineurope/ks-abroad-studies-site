@@ -3,7 +3,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ExternalLink } from "lucide-react";
 import { JsonLd } from "@/components/json-ld";
-import { PUBLIC_REVALIDATE_SECONDS } from "@/lib/cache";
 import { getPhdUniversities, getPhdUniversity } from "@/lib/phd";
 import {
   breadcrumbJsonLd,
@@ -11,7 +10,7 @@ import {
 } from "@/lib/structured-data";
 import { regionLabel } from "@/lib/utils";
 
-export const revalidate = PUBLIC_REVALIDATE_SECONDS;
+export const revalidate = 120;
 
 type Props = { params: Promise<{ id: string }> };
 

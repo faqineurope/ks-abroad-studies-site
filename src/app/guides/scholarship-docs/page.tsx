@@ -2,9 +2,7 @@
 import Link from "next/link";
 import { getPakistanGuides } from "@/lib/guides";
 import { getScholarshipRegions, getScholarshipsDataset } from "@/lib/scholarships";
-import { PUBLIC_REVALIDATE_SECONDS } from "@/lib/cache";
-
-export const revalidate = PUBLIC_REVALIDATE_SECONDS;
+export const revalidate = 120;
 
 export const metadata: Metadata = {
   title: "Scholarship documents by region",

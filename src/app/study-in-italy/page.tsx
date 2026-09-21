@@ -3,9 +3,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { getMeta } from "@/lib/data";
 import { formatAdmissionDate } from "@/lib/utils";
-import { PUBLIC_REVALIDATE_SECONDS } from "@/lib/cache";
-
-export const revalidate = PUBLIC_REVALIDATE_SECONDS;
+export const revalidate = 120;
 
 export const metadata: Metadata = {
   title: "Study in Italy",

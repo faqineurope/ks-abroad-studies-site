@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import type { ConsultancyCase } from "@/lib/consultancy";
+import type { ConsultancyCase } from "@/lib/consultancy-types";
 
 export function ConsultancyPanel() {
   const [cases, setCases] = useState<ConsultancyCase[]>([]);

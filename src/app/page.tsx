@@ -14,9 +14,7 @@ import { SocialLinks } from "@/components/social-links";
 import { getMeta } from "@/lib/data";
 import { SITE } from "@/lib/site";
 import { faqJsonLd } from "@/lib/structured-data";
-import { PUBLIC_REVALIDATE_SECONDS } from "@/lib/cache";
-
-export const revalidate = PUBLIC_REVALIDATE_SECONDS;
+export const revalidate = 120;
 
 export default async function HomePage() {
   const [meta] = await Promise.all([getMeta()]);

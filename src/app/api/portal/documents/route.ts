@@ -76,7 +76,7 @@ export async function POST(req: NextRequest) {
   const folder = path.join(UPLOAD_DIR, student.id);
   await fs.mkdir(folder, { recursive: true });
   const bytes = Buffer.from(await file.arrayBuffer());
-  await fs.writeFile(path.join(folder, storedName), bytes);
+  await fs.writeFile(path.join(/* turbopackIgnore: true */ folder, storedName), bytes);
 
   student.documents = student.documents ?? [];
   student.documents.push({

@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 import { ExternalLink } from "lucide-react";
 import { JsonLd } from "@/components/json-ld";
 import { StatusBadge } from "@/components/status-badge";
-import { PUBLIC_REVALIDATE_SECONDS } from "@/lib/cache";
 import { getUniversities, getUniversity } from "@/lib/data";
 import {
   breadcrumbJsonLd,
@@ -12,7 +11,7 @@ import {
 } from "@/lib/structured-data";
 import { formatAdmissionDate, formatFee, regionLabel } from "@/lib/utils";
 
-export const revalidate = PUBLIC_REVALIDATE_SECONDS;
+export const revalidate = 120;
 
 type Props = { params: Promise<{ id: string }> };
 

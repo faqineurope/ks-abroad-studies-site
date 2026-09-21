@@ -2,9 +2,7 @@
 import Link from "next/link";
 import { UniversityExplorer } from "@/components/university-explorer";
 import { getMeta, getUniversities } from "@/lib/data";
-import { PUBLIC_REVALIDATE_SECONDS } from "@/lib/cache";
-
-export const revalidate = PUBLIC_REVALIDATE_SECONDS;
+export const revalidate = 120;
 
 export const metadata: Metadata = {
   title: "Italian Public Universities",

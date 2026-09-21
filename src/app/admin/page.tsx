@@ -1,8 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import type { ApplicationStatus } from "@/lib/applications";
-import type { ConsultancyCase, ConsultancyStatus } from "@/lib/consultancy";
+import type { ApplicationStatus } from "@/lib/application-types";
+import type { ConsultancyCase, ConsultancyStatus } from "@/lib/consultancy-types";
 import type { AdmissionStatus, UniversitiesDataset, University } from "@/lib/types";
 
 const STORAGE_KEY = "ks-admin-password";

@@ -3,9 +3,7 @@ import Link from "next/link";
 import { ProgramExplorer } from "@/components/program-explorer";
 import { getCentSGuide } from "@/lib/cent-s";
 import { getMeta, getPrograms } from "@/lib/data";
-import { PUBLIC_REVALIDATE_SECONDS } from "@/lib/cache";
-
-export const revalidate = PUBLIC_REVALIDATE_SECONDS;
+export const revalidate = 120;
 
 export const metadata: Metadata = {
   title: "Bachelor's Programs in English",

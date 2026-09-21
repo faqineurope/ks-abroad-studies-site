@@ -7,7 +7,7 @@ import {
   type ApplicationStatus,
   type PackItem,
   type StudentApplication,
-} from "@/lib/applications";
+} from "@/lib/application-types";
 
 type UniOption = {
   id: string;
